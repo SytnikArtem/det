@@ -64,7 +64,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: normal
-	font-family: $default-font
+	font-family: "ProximaNova"
 	overflow-x: hidden
 
 img
@@ -74,6 +74,28 @@ img
 
 .text-center
 	text-align: center
-
-
+.container
+	min-width: 320px
+	max-width: 1245px
+	width: 100%
+	padding: 0 10px
+	margin: 0 auto
+.header
+	padding: 30px 0
+	&-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&-right
+		display: flex
+		align-items: center
+		justify-content: flex-end
+	&-btn
+		outline: none
+		opacity: 0.1
+		border-radius: 4px
+		border: solid 3px #3742fa
+		cursor: pointer
+		text-decoration: none
+		padding: 10px 15px
 @import "media" // Всегда в конце
