@@ -71,9 +71,27 @@ img
 	display: block
 	max-width: 100%
 	height: auto
-
+.btn
+	outline: none
+	border-radius: 4px
+	border: solid 3px rgba(55, 66, 250, 0.1)
+	cursor: pointer
+	text-decoration: none
+	padding: 5px 17px
+	font-family: ProximaNova
+	font-size: 18px
+	letter-spacing: -0.2px
+	text-align: center
+	color: #3742fa
+	background: transparent
+	&_blue
+		color: #ffffff
+		background-color: #5869f8
+		border-color: #5869f8
 .text-center
 	text-align: center
+.nowrap
+	white-space: nowrap
 .container
 	min-width: 320px
 	max-width: 1245px
@@ -90,12 +108,36 @@ img
 		display: flex
 		align-items: center
 		justify-content: flex-end
+.main
+	&-flex
+		display: flex
+		justify-content: space-between
+	&-left
+		width: 500px
+		padding: 140px 0 0
+		&-flex
+			display: flex
+			justify-content: flex-start
+			align-items: center
+	&-right
+		width: 730px
+	&-title
+		font-family: ProximaNova
+		font-size: 36px
+		font-weight: 600
+		line-height: 1.17
+		color: #323647
+		margin-bottom: 25px
+	&-text
+		font-family: ProximaNova
+		font-size: 20px
+		line-height: 1.5
+		color: #57606f
 	&-btn
-		outline: none
-		opacity: 0.1
-		border-radius: 4px
-		border: solid 3px #3742fa
-		cursor: pointer
-		text-decoration: none
-		padding: 10px 15px
+		font-size: 20px
+		padding: 8px 20px
+		&_first
+			margin-right: 15px
+			font-weight: bold
+			letter-spacing: 0.5px
 @import "media" // Всегда в конце
