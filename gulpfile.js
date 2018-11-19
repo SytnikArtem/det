@@ -10,8 +10,14 @@ var gulp = require('gulp'),
     tinypng = require('gulp-tinypng-compress'),
     cache = require('gulp-cache'),
     imagemin = require('gulp-imagemin'),
+    htmlImport = require('gulp-html-import');
     sourcemaps = require('gulp-sourcemaps');
 
+gulp.task('import', function () {
+    gulp.src('app/*.html')
+        .pipe(htmlImport('app/components/'))
+        .pipe(gulp.dest('app'));
+});
 gulp.task('sass',function(){
   return gulp.src('app/sass/**/*.sass')
     .pipe(sourcemaps.init())
@@ -72,7 +78,7 @@ gulp.task('img', ['tiny'], function(){
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('watch', ['browser-sync', 'libs-css', 'jquery', 'libs-js'], function() {
+gulp.task('watch', ['browser-sync', 'libs-css', 'jquery', 'libs-js', 'import'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
@@ -80,7 +86,7 @@ gulp.task('watch', ['browser-sync', 'libs-css', 'jquery', 'libs-js'], function()
 gulp.task('clean', function() {
     return del.sync('dist');
 });
-gulp.task('build', ['clean', 'sass', 'jquery', 'img'], function(){
+gulp.task('build', ['clean', 'sass', 'jquery', 'img', 'import'], function(){
   var buildCss = gulp.src([
     'app/css/main.css',
     'app/css/libs.min.css'
