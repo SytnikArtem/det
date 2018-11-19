@@ -98,12 +98,26 @@ img
 	text-align: center
 .nowrap
 	white-space: nowrap
+.title
+	font-size: 36px
+	font-weight: 600
+	line-height: 1.17
+	color: #323647
+	letter-spacing: 0.4px
+.text
+	font-size: 20px
+	line-height: 1.5
+	color: #57606f
 .container
 	min-width: 320px
 	max-width: 1245px
 	width: 100%
 	padding: 0 10px
 	margin: 0 auto
+.subtitle
+	font-size: 30px
+	line-height: 1.53
+	color: #323647
 .line
 	font-family: Arial
 	display: inline-block
@@ -159,20 +173,15 @@ img
 			justify-content: flex-start
 			align-items: center
 			margin-top: 35px
+			&_tech
+				margin-top: 27px
+				justify-content: space-between
+				padding: 0 20px
 	&-right
 		width: 600px
 		padding-top: 45px
 	&-title
-		font-size: 36px
-		font-weight: 600
-		line-height: 1.17
-		color: #323647
 		margin-bottom: 25px
-		letter-spacing: 0.4px
-	&-text
-		font-size: 20px
-		line-height: 1.5
-		color: #57606f
 	&-btn
 		font-size: 20px
 		padding: 8px 20px
@@ -181,9 +190,6 @@ img
 			font-weight: bold
 			letter-spacing: 0.5px
 	&-subtitle
-		font-size: 30px
-		line-height: 1.53
-		color: #323647
 		margin-bottom: 20px
 	&-link
 		font-size: 20px
@@ -285,4 +291,136 @@ img
 			text-decoration: none
 			&:hover
 				text-decoration: underline
+.tech
+	padding: 155px 0 80px
+	background-image: url(../img/tech1.png), url(../img/tech2.png)
+	background-size: 543px, 602px
+	background-repeat: no-repeat, no-repeat
+	background-position: left 20px top 45px, right 20px top 45px
+	&-main
+		text-align: center
+		width: 100%
+		max-width: 500px
+		margin: 0 auto
+	&-title
+		margin-bottom: 20px
+	&-list
+		display: flex
+		justify-content: space-between
+		margin-top: 125px
+	&-item
+		border-radius: 10.5px
+		padding: 50px 30px 45px 105px
+		font-size: 20px
+		line-height: 1.5
+		color: #57606f
+		width: calc(50% - 12px)
+		&_first
+			background: rgba(182, 202, 251, 0.12) url(../img/structure.svg) no-repeat left 33px top 58px
+		&_second
+			background: rgba(182, 202, 251, 0.12) url(../img/see.svg) no-repeat left 30px top 58px
+	&-flex
+		display: flex
+		justify-content: space-between
+	&-mask
+		&:before
+			position: absolute
+			width: 300%
+			height: 100%
+			background: #ffffff
+			z-index: 2
+			content: ''
+			top: 0
+			left: calc(-300% - 10px)
+	&-hide
+		z-index: 3
+	&-block
+		width: calc(50% - 12px)
+		position: relative
+		&-title
+			font-size: 24px
+			font-weight: 600
+			line-height: 1.92
+			color: #323647
+			margin-bottom: 10px
+		&-text
+			font-size: 20px
+			line-height: 1.5
+			color: #57606f
+	&-slider
+		padding-bottom: 70px
+		margin-top: 30px
+		&-item
+			width: 600px
+			border-radius: 11px
+			box-shadow: 0 2px 16px 0 rgba(88, 105, 248, 0.15)
+			background-color: #ffffff
+			padding: 25px 30px 30px
+			margin-right: 25px
+			outline: none
+		&-text
+			font-size: 18px
+			line-height: 1.5
+			color: #57606f
+		&-title
+			font-size: 18px
+			line-height: 1.5
+			font-weight: 600
+			color: #323647
+		.slick-list
+			overflow: visible
+		.slick-prev, .slick-next
+			width: 43px
+			height: 43px
+			border-radius: 50%
+		.slick-prev:before, .slick-next:before
+			width: 100%
+			height: 100%
+			content: ''
+			background: rgba(88, 105, 248, 0.1) url(../img/arrow.svg) no-repeat center
+			background-size: 25px 25px
+			display: block
+			border-radius: 50%
+			opacity: 1
+		.slick-prev:hover:before, .slick-next:hover:before
+			background-color: rgba(88, 105, 248, 0.2)
+		.slick-prev:before
+			transform: rotate(90deg)
+		.slick-next:before
+			transform: rotate(-90deg)
+		.slick-prev
+			left: 0
+			top: calc(100% - 20px)
+		.slick-next
+			left: 135px
+			top: calc(100% - 20px)
+	&-numbers
+		font-size: 28px
+		line-height: 0.96
+		color: #5869f8
+		position: absolute
+		left: 65px
+		bottom: 55px
+
+.advantages
+	padding-bottom: 55px
+	&-subtitle
+		text-align: center
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 260px
+			height: 3px
+			background: linear-gradient(to left, rgba(181, 201, 249, 0.5), rgba(255, 255, 255, 0.5))
+			left: 0
+			top: calc(50% - 1px)
+		&:after
+			content: ''
+			position: absolute
+			width: 260px
+			height: 3px
+			background: linear-gradient(to right, rgba(181, 201, 249, 0.5), rgba(255, 255, 255, 0.5))
+			right: 0
+			top: calc(50% - 1px)
 @import "media" // Всегда в конце

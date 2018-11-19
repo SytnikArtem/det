@@ -14,9 +14,10 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('import', function () {
-    gulp.src('app/*.html')
+    gulp.src('app/components/pages/*.html')
         .pipe(htmlImport('app/components/'))
-        .pipe(gulp.dest('app'));
+        .pipe(gulp.dest('app'))
+        .pipe(browserSync.stream());
 });
 gulp.task('sass',function(){
   return gulp.src('app/sass/**/*.sass')
@@ -78,9 +79,10 @@ gulp.task('img', ['tiny'], function(){
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('watch', ['browser-sync', 'libs-css', 'jquery', 'libs-js', 'import'], function() {
+gulp.task('watch', ['browser-sync', 'libs-css', 'jquery', 'libs-js'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch(['app/components/*.html', 'app/components/pages/*.html'], ['import'], browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 gulp.task('clean', function() {
