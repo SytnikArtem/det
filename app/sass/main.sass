@@ -150,6 +150,198 @@ img
 			transition: color .5s ease
 			&:hover
 				color: #5869f8
+.anim
+	&-img11
+		position: absolute
+		left: 22.5%
+		bottom: 10%
+		border-radius: 50%
+		background: #daddf5
+		animation-name: anim-img11
+		display: block
+	&-img12
+		position: absolute
+		right: 6.5%
+		bottom: 10%
+		border-radius: 50%
+		background: #daddf5
+		animation-name: anim-img12
+		display: block
+	&-img21
+		animation-name: anim-img21
+		svg
+			margin: 0 auto
+			display: block
+	&-img22
+		position: absolute
+		animation-name: anim-img21
+		top: -6%
+		right: 0
+		transition: transform 2s ease
+	&-img23
+		position: absolute
+		left: 11%
+		top: 31%
+	&-img24
+		position: absolute
+		right: 14%
+		bottom: 5%
+		animation-name: anim-img21
+	&-img32
+		position: absolute
+		right: -6%
+		top: 4%
+		z-index: 3
+		animation-name: anim-img21
+	&-img33
+		position: absolute
+		right: 39%
+		top: 28%
+		z-index: 1
+		animation-name: anim-img21
+	&-img34
+		position: absolute
+		right: 21%
+		top: 13%
+		z-index: 2
+		animation-name: anim-img21
+	&-img35
+		position: absolute
+		left: 13%
+		top: -8%
+		z-index: 2
+		animation-name: anim-img35
+	&-img42
+		position: absolute
+		left: 23.5%
+		top: -18%
+		animation-name: anim-img35
+	&-img43
+		position: absolute
+		left: 34%
+		top: -5%
+		animation-name: anim-img35
+	&-img45
+		position: absolute
+		left: 52%
+		top: 21%
+		max-width: 74px
+		animation-name: anim-img35
+		z-index: 2
+	&-img46
+		position: absolute
+		left: 22%
+		bottom: 23%
+		max-width: 43px
+		animation-name: anim-img35
+		z-index: 2
+	&-img47
+		position: absolute
+		left: 30%
+		bottom: 30%
+		width: 28px
+		height: 46px
+		border-radius: 2px
+	&-height
+		animation-name: anim-height
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		animation-iteration-count: infinite
+		animation-duration: 2s
+		&_first
+			background-color: rgba(49, 195, 99, 0.5)
+		&_second
+			background-color: rgba(49, 195, 99, 0.7)
+		&_third
+			background-color: rgba(49, 195, 99, 0.9)
+	&-img48
+		position: absolute
+		left: 39.5%
+		bottom: 30%
+		width: 28px
+		height: 60px
+		border-radius: 2px
+	&-img49
+		position: absolute
+		left: 49%
+		bottom: 30%
+		width: 28px
+		height: 80px
+		border-radius: 2px
+@keyframes anim-img11
+	0%
+		transform: translate(66px, -135px)
+	100%
+		transform: translate(0, 0)
+@keyframes anim-img12
+	0%
+		transform: translate(-136px, -135px)
+	100%
+		transform: translate(0, 0)
+@keyframes anim-img21
+	0%
+		opacity: 0
+		transform: translateX(50px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+@keyframes anim-img35
+	0%
+		opacity: 0
+		transform: translateX(-50px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+@keyframes anim-height
+	0%
+		height: 50%
+	50%
+		height: 100%
+	100%
+		height: 50%
+.star1
+	position: absolute
+	left: 7.5%
+	top: 12%
+.star2
+	position: absolute
+	right: 7.5%
+	top: 30%
+.star3
+	position: absolute
+	left: 13.5%
+	bottom: -17%
+.star4
+	position: absolute
+	left: 39%
+	bottom: -17%
+.star5
+	position: absolute
+	left: -5%
+	bottom: -8%
+.triangle1
+	position: absolute
+	right: -12%
+	top: 50%
+.circle1
+	width: 26px
+	height: 26px
+	background-image: linear-gradient(166deg, #5869f8, #966dfb)
+	border-radius: 50%
+	position: absolute
+	left: 17%
+	top: -24%
+.triangle2
+	position: absolute
+	right: 9%
+	top: -30%
+.triangle3
+	position: absolute
+	right: 9%
+	top: -30%
 .main
 	&-flex
 		display: flex
@@ -160,14 +352,22 @@ img
 			padding-bottom: 65px
 		&_reverse
 			flex-direction: row-reverse
+	&-text
+		font-size: 20px
+		line-height: 1.5
+		color: #57606f
 	&_block
-		padding: 30px 0
+		padding: 100px 0 45px
+		&_big
+			padding: 120px 0 75px
+		&_last
+			padding-bottom: 90px
 	&-left
 		width: 600px
 		&_top
 			padding: 30px 100px 0 0
 		&_bottom
-			padding: 0 70px 0 0
+			padding: 25px 70px 0 0
 		&-flex
 			display: flex
 			justify-content: flex-start
@@ -180,6 +380,23 @@ img
 	&-right
 		width: 600px
 		padding-top: 45px
+		&_down
+			padding-top: 15px
+		&_top
+			padding-top: 0
+		&-anim
+			margin: 0 auto
+			position: relative
+			&_first
+				width: 440px
+			&_second
+				width: 440px
+				left: -28px
+				top: 8px
+		&-img
+			margin: 0 auto
+			&_left
+				margin-left: 40px
 	&-title
 		margin-bottom: 25px
 	&-btn
@@ -190,7 +407,8 @@ img
 			font-weight: bold
 			letter-spacing: 0.5px
 	&-subtitle
-		margin-bottom: 20px
+		margin-bottom: 25px
+		line-height: 1.2
 	&-link
 		font-size: 20px
 		line-height: 1.35
@@ -343,10 +561,15 @@ img
 			line-height: 1.92
 			color: #323647
 			margin-bottom: 10px
+			letter-spacing: 0.2px
+			&_marg
+				margin-bottom: 20px
 		&-text
 			font-size: 20px
 			line-height: 1.5
 			color: #57606f
+			&_marg
+				margin-bottom: 30px
 	&-slider
 		padding-bottom: 70px
 		margin-top: 30px
@@ -400,7 +623,12 @@ img
 		color: #5869f8
 		position: absolute
 		left: 65px
-		bottom: 55px
+		bottom: 5px
+	&-relative
+		position: relative
+	&-content
+		&_blue
+			background-color: rgba(182, 202, 251, 0.12)
 
 .advantages
 	padding-bottom: 55px
@@ -423,4 +651,85 @@ img
 			background: linear-gradient(to right, rgba(181, 201, 249, 0.5), rgba(255, 255, 255, 0.5))
 			right: 0
 			top: calc(50% - 1px)
+.more
+	padding: 80px 0 65px
+	&-title
+		font-size: 30px
+		line-height: 1.53
+		color: #323647
+		text-align: center
+	&-flex
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-top: 15px
+	&-item
+		width: 25%
+		text-align: center
+		margin: 20px 0
+		&-block
+			width: 80px
+			height: 80px
+			border-radius: 21px
+			border: 1px solid rgba(88, 105, 248, 0.3)
+			display: flex
+			align-items: center
+			justify-content: center
+			margin: 0 auto 15px
+		&-title
+			max-width: 205px
+			margin: 0 auto
+			text-align: center
+			font-size: 20px
+			line-height: 1.5
+			color: #57606f
+.overflov-img
+	max-width: calc(100% + 60px)
+	margin: -10px 0 0px -30px
+.standart
+	&-main
+		background: url(../img/standart_bg.jpg) no-repeat center
+		background-size: cover
+		border-radius: 10px
+		overflow: hidden
+		padding: 100px 0 120px
+		&-block
+			max-width: 420px
+			margin: 0 auto
+			text-align: center
+	&-title
+		margin-bottom: 20px
+	&-btn
+		font-size: 20px
+		font-weight: bold
+		margin-top: 35px
+		padding: 8px 25px
+	&-content
+		padding: 25px 0 75px
+		border-bottom: 1px solid rgba(196, 203, 212, 0.5)
+		&-item
+			margin-top: 75px
+		&-block
+			max-width: 807px
+			border-radius: 10.5px
+			background-color: #ffffff
+			width: 100%
+			margin: 0 auto
+			border: 7px solid rgba(181, 201, 249, 0.2)
+			padding: 60px 95px 60px
+			&_last
+				padding-bottom: 15px
+		&-text
+			font-size: 20px
+			line-height: 1.5
+			color: #57606f
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+		&-title
+			font-size: 30px
+			line-height: 1.53
+			color: #323647
+			margin-bottom: 30px
+
 @import "media" // Всегда в конце
