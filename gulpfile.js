@@ -52,7 +52,11 @@ gulp.task('libs-css', ['sass'], function(){
 gulp.task('libs-js', function(){
   return gulp.src([
     'app/libs/slick-carousel/slick/slick.min.js',
-    'app/libs/wow/dist/wow.min.js'
+    'app/libs/wow/dist/wow.min.js',
+    'app/libs/scrollmagic/TweenMax.min.js',
+    'app/libs/scrollmagic/ScrollMagic.min.js',
+    'app/libs/scrollmagic/animation.gsap.js',
+    'app/libs/scrollmagic/addIndicators.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

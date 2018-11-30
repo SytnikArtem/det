@@ -94,6 +94,14 @@ img
 		&:hover
 			background-color: #3c4ee7
 			border-color: #3c4ee7
+	&_services
+		display: block
+		width: 220px
+		margin: 0 auto
+		padding: 10px 0
+		text-align: center
+		font-weight: bold
+		letter-spacing: 1px
 .text-center
 	text-align: center
 .nowrap
@@ -511,15 +519,44 @@ img
 				text-decoration: underline
 .tech
 	padding: 155px 0 80px
-	background-image: url(../img/tech1.png), url(../img/tech2.png)
-	background-size: 543px, 602px
-	background-repeat: no-repeat, no-repeat
-	background-position: left 20px top 45px, right 20px top 45px
+	position: relative
+	&:before
+		content: ''
+		width: 1920px
+		height: 100%
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		background-image: url(../img/tech1.png), url(../img/tech2.png)
+		background-size: 543px, 602px
+		background-repeat: no-repeat, no-repeat
+		position: absolute
+		background-position: left 30px top 45px, right 30px top 45px
+		z-index: -1
 	&-main
 		text-align: center
 		width: 100%
 		max-width: 500px
 		margin: 0 auto
+		position: relative
+		&-svg
+			position: absolute
+			&_first
+				left: 0
+				top: -35px
+			&_second
+				width: 26px
+				height: 26px
+				background-image: linear-gradient(297deg, #fbab7e, #f7ce68)
+				border-radius: 50%
+				top: -70px
+				left: 31%
+			&_third
+				right: 110px
+				top: -70px
+			&_fourth
+				right: -30px
+				top: -15px
 	&-title
 		margin-bottom: 20px
 	&-list
@@ -555,6 +592,10 @@ img
 	&-block
 		width: calc(50% - 12px)
 		position: relative
+		&_left
+			position: relative
+			left: -35px
+			top: 50px
 		&-title
 			font-size: 24px
 			font-weight: 600
@@ -627,14 +668,85 @@ img
 	&-relative
 		position: relative
 	&-content
+		padding: 75px 0 30px
+		background: #ffffff
+		&_top
+			margin-top: -70px
 		&_blue
 			background-color: rgba(182, 202, 251, 0.12)
+	&-block
+		&-img
+			&_big
+				max-width: 750px
+				position: relative
+				top: 30px
+				left: 55px
+			&_left
+				top: -15px
+				left: -220px
+			&_right
+				top: -25px
+				left: 105px
+		&_chain
+			position: relative
+			left: -10px
+			margin-bottom: 65px
+	&-svg
+		&_first
+			top: -70px
+			left: 200px
+		&_second
+			top: -70px
+			right: 175px
+		&_third
+			bottom: 45px
+			right: 170px
+		&_fourth
+			left: 80px
+			bottom: 80px
+		&_fifth
+			left: 90px
+			top: 60px
+		&_sixth
+			left: 110px
+			top: 235px
+		&_seventh
+			right: 115px
+			top: 200px
+		&_eight
+			bottom: 190px
+			right: 90px
+		&_ninth
+			top: 50px
+			right: 80px
+		&_ten
+			top: 140px
+			right: 45px
+		&_eleven
+			top: 80px
+			left: 135px
+		&_twelve
+			top: -5px
+			left: 150px
+		&_thirteen
+			bottom: 205px
+			left: 155px
+		&_fourteen
+			right: 285px
+			top: 45px
+		&_fifteen
+			right: 185px
+			top: 25px
+		&_sixteen
+			right: 205px
+			top: 95px
 
 .advantages
-	padding-bottom: 55px
+	padding-bottom: 100px
 	&-subtitle
 		text-align: center
 		position: relative
+		margin-bottom: 75px
 		&:before
 			content: ''
 			position: absolute
@@ -731,5 +843,110 @@ img
 			line-height: 1.53
 			color: #323647
 			margin-bottom: 30px
+svg
+	overflow: hidden
+.services
+	padding: 125px 0 130px
+	&-flex
+		display: flex
+		&_end
+			flex-direction: row-reverse
+	&-block
+		width: 50%
+	&-title
+		font-size: 30px
+		line-height: 1.53
+		color: #323647
+		margin-bottom: 20px
+	&-text
+		font-size: 20px
+		line-height: 1.5
+		color: #57606f
+		&_marg
+			margin-bottom: 30px
+		&_blue
+			color: #5869f8
+	&-content
+		padding: 65px 0 60px
+		&_blue
+			background: rgba(182, 202, 251, 0.12)
+	&-list
+		margin-top: 10px
+		&-title
+			margin-top: 60px
+		&_marg
+			margin-top: 20px
+	&-item
+		padding-left: 35px
+		padding-right: 20px
+		margin-bottom: 15px
+		position: relative
+		&:before
+			position: absolute
+			width: 18px
+			height: 2px
+			content: ''
+			display: block
+			background: #5869f8
+			left: 3px
+			top: 13px
+.distribut
+	padding: 70px 0 70px
+.sheme
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&-item
+		text-align: center
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-shrink: 0
+		color: #ffffff
+		&_first
+			width: 308px
+			height: 125px
+			background: url(../img/sheme1.png) no-repeat center
+			padding: 0 20px
+		&_second
+			width: 144px
+			height: 125px
+			background: url(../img/sheme2.png) no-repeat center
+			color: #323647
+		&_third
+			width: 147px
+			height: 125px
+			background: url(../img/sheme2.png) no-repeat center
+		&_fourth
+			width: 200px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 176px
+			&_top
+				background: #5869f8
+				width: 100%
+				height: 72px
+				border-radius: 10px
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 0 10px
+			&_bottom
+				background: #5869f8
+				width: 100%
+				height: 72px
+				border-radius: 10px
+				display: flex
+				align-items: center
+				justify-content: center
+		&_fifth
+			width: 183px
+			height: 176px
+			background: url(../img/sheme3.png) no-repeat center
+			padding: 0 10px
+	&-text
 
+		font-weight: bold
+		letter-spacing: 1px
 @import "media" // Всегда в конце

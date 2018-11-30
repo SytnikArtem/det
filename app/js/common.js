@@ -48,12 +48,33 @@ $(document).ready(function() {
         }
     );
     wow.init();
+    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onCenter", duration: "200%"}});
+    $('.parallax').each(function() {
+        var trigg = $('body'),
+            parallax = this.getAttribute('data-parallax'),
+            speed = parallax * 100 + '%';
+        new ScrollMagic.Scene({triggerElement: trigg})
+            .setTween(this, {y: speed, ease: Linear.easeNone})
+            .addTo(controller);
+    });
+    var controller2 = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%", offset: '100'}});
+    $('.parallax2').each(function() {
+        var trigg = this.parentNode,
+            parallax = this.getAttribute('data-parallax'),
+            speed = parallax * 100 + '%';
+
+        new ScrollMagic.Scene({triggerElement: trigg})
+            .setTween(this, {y: speed, ease: Linear.easeNone})
+            .addTo(controller2);
+    });
 });
 $(window).scroll(function(){
     var windowTop,
+        block,
         blockTop,
         windowHeight,
         items,
+        i,
         animDeg;
     function rotateBlock(){
         windowTop = $(window).scrollTop();
@@ -69,5 +90,17 @@ $(window).scroll(function(){
             $('.anim-img22').css({transform: 'rotateX(0deg)'});
         }
     }
-    rotateBlock();
+    // rotateBlock();
+    // function paralaxBlock() {
+    //     block = $('.paralax');
+    //     windowTop = $(window).scrollTop();
+    //     for (i = 0; i < block.length; i++) {
+    //         blockTop = block.eq(i).offset().top;
+    //         console.log(blockTop);
+    //     }
+    //
+    //
+    //
+    // }
+    // paralaxBlock();
 });
