@@ -29,6 +29,25 @@ $(document).ready(function() {
             }
         ]
     });
+    $('.career-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: true,
+        variableWidth: true,
+        touchMove: true
+    });
+    $('.team-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        arrows: true,
+        variableWidth: true,
+        centerMode: true,
+        touchMove: true
+    });
     $('.tech-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
         $('.tech-current').text(nextSlide + 1);
     });
