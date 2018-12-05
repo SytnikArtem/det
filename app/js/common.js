@@ -33,7 +33,6 @@ $(document).ready(function() {
         infinite: true,
         dots: true,
         arrows: true,
-        variableWidth: true,
         touchMove: true
     });
     $('.team-slider').slick({

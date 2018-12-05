@@ -416,6 +416,57 @@
     margin-bottom: 20px
   .about
     padding-bottom: 20px
+  .vacancy-top-block
+    border-top: none
+  .career
+    padding: 85px 0 60px
+    background-size: 1120px
+    background-position: bottom -35px center
+  .career-main
+    max-width: 440px
+  .career-title
+    font-size: 28px
+  .career-content
+    padding: 45px 0 40px
+  .career-list
+    margin-top: 35px
+  .career-item
+    padding-left: 80px
+    margin-bottom: 30px
+  .career-content
+    padding: 45px 0 5px
+  .career-absolute
+    top: 75px
+  .slick-dotted.slick-slider
+    margin-bottom: 0
+  .text-team
+    margin: 10px auto 0
+    max-width: 435px
+  .team-slider
+    margin: 30px auto 90px
+    width: 650px
+  .team-slider-container
+    width: 630px
+    padding: 30px 35px 40px 155px
+    background-position: left 45px top 25px
+  .team-slider .slick-next, .team-slider .slick-prev
+    z-index: 3
+    width: 56px
+    height: 56px
+  .team-slider .slick-next
+    right: -74px
+  .team-slider.slick-dotted
+    margin-bottom: 85px
+  .career-row
+    margin: 45px 0 25px
+  .step
+    margin: 50px 0 60px
+    padding: 0
+  .step-number
+    margin-bottom: 15px
+  .step-item:after
+    width: 203px
+    right: -34%
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   .container
@@ -495,6 +546,15 @@
     right: 70px
   .about-left
     margin-right: 40px
+  .team-slider-container
+    width: 560px
+  .team-slider .slick-next
+    right: -33px
+  .team-slider .slick-prev
+    left: -33px
+  .step-item:after
+    width: 140px
+    right: -29%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
   .container
@@ -646,6 +706,65 @@
   .vacancy-form-btn
     width: 100%
     padding: 10px 0
+  .career
+    background-size: cover
+    background-position: center
+  .career-item
+    width: 100%
+  .team-slider-container
+    width: 440px
+    margin: 0 40px
+  .team-slider
+    width: 450px
+  .team-mask:after, .team-mask:before
+    display: none
+  .career-absolute
+    width: 100%
+  .career-tab
+    font-size: 18px
+  .career-slider .slick-next, .career-slider .slick-prev
+    width: 50px
+    height: 50px
+  .career-slider .slick-next:before, .career-slider .slick-prev:before
+    background: url(../img/arrow.svg) no-repeat center;
+    background-size: 37px 20px
+  .team-slider-container
+    padding: 100px 20px 20px
+  .team-slider-container
+    background-position: center top 10px
+  .team-slider .slick-next
+    right: 30px
+    top: 75px
+  .team-slider .slick-prev
+    left: 30px
+    top: 75px
+  .career-tabs
+    position: absolute
+    top: -70px
+    margin-top: 0
+    width: 100%
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.15)
+    border-radius: 0
+  .career-column
+    width: 100%
+  .career-row
+    flex-wrap: wrap
+  .step-item
+    width: 100%
+    margin-bottom: 70px
+    &:last-child
+      margin-bottom: 0
+  .step-list
+    flex-wrap: wrap
+  .step-item:after
+    width: 2px
+    height: 50px
+    left: 50%
+    transform: translateX(-50%)
+    top: inherit
+    bottom: -57px
+  .step
+    margin-bottom: 30px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
   .container
@@ -1047,13 +1166,159 @@
     line-height: 1.39
   .more-item-title
     margin: 18px 0
+  .vacancy-top-link
+    width: 100%
+  .vacancy-top-block
+    padding-top: 90px
+  .vacancy-top-img
+    margin-top: 30px
+  .vacancy-top
+    padding-bottom: 35px
+  .vacancy-main-block
+    border: none
+  .vacancy-main-top
+    padding: 0
+  .vacancy-main-title
+    font-size: 28px
+    margin-bottom: 15px
+  .vacancy-main
+    margin-top: 30px
+  .vacancy-main-text, .vacancy-main-subtitle, .vacancy-item
+    line-height: 1.39
+  .vacancy-main-text
+    margin-bottom: 25px
+  .vacancy-item
+    margin-bottom: 25px
+  .vacancy-list
+    margin: 10px 0 30px
+  .vacancy-main-bottom
+    padding: 20px 0 30px
+    width: calc(100% + 46px)
+    margin-left: -23px
+  .vacancy-bottom-flex
+    flex-direction: column
+    align-items: center
+    padding: 0 23px
+  .vacancy-bottom-img
+    margin: 10px 0 10px
+  .vacancy-bottom-text
+    line-height: 1.39
+  .vacancy-form
+    padding: 0 23px
+    margin-top: 20px
+  .vacancy-form-textarea
+    margin-top: 15px
+  .vacancy-form-group
+    margin-top: 30px
+  .vacancy-form-row
+    margin-top: 10px
+  .vacancy
+    padding-bottom: 0
+    border-bottom: none
+  .career
+    padding: 265px 0 10px
+  .btn_services
+    width: 100%
+  .career-title
+    line-height: 1.21
+  .career-content
+    padding: 35px 0 5px
+  .career-item-title, .career-item-text
+    line-height: 1.39
+  .career-item
+    padding-left: 58px
+    background-size: 35px
+    background-position: left 2px top 5px
+  .career-tab
+    font-size: 16px
+    line-height: 1.08
+    padding: 5px 0
+    height: 44px
+    display: flex
+    align-items: center
+    justify-content: center
+  .career-absolute
+    top: 65px
+  .career-tabs
+    top: -60px
+  .career-slider .slick-next, .career-slider .slick-prev
+    width: 40px
+    height: 40px
+  .career-slider .slick-next
+    right: 25px
+  .career-slider .slick-prev
+    left: 25px
+  .career-slider .slick-dots
+    bottom: 10px
+  .slick-dotted.slick-slider
+    margin-bottom: -10px
+  .text-team
+    margin: 17px auto 0
+    max-width: 300px
+  .team-slider-container
+    width: 330px
+  .team-slider
+    width: 330px
+  .team-slider
+    margin: 10px auto 90px
+  .team-slider-container
+    padding: 135px 25px 20px
+    background-position: center top 30px
+  .team-slider-text, .team-slider-name
+    line-height: 1.39
+  .team-slider-name
+    margin-top: 25px
+    max-width: 200px
+  .team-slider .slick-next, .team-slider .slick-prev
+    width: 40px
+    height: 40px
+  .team-slider .slick-next
+    right: 25px
+    top: 90px
+  .team-slider .slick-prev
+    left: 25px
+    top: 90px
+  .team-slider.slick-dotted
+    margin-bottom: 35px
+  .team-slider .slick-dots
+    bottom: -25px
+  .career-row-title
+    font-size: 18px
+  .career-row
+    margin: 20px 0 0
+  .career-subtitle, .career-sublist-text
+    font-size: 18px
+    line-height: 1.39
+  .career-sublist
+    margin-top: 15px
+  .career-column
+    margin-bottom: 10px
+  .step
+    margin: 30px 0 35px
+  .step-item
+    margin-bottom: 85px
+  .step-item:after
+    bottom: -68px
+  .step-text
+    line-height: 1.39
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 360px)
+@media only screen and (max-width : 361px)
   .container
     padding: 0 10px
   .popup-block
     width: 95%
   .tech-slider-item
+    width: 300px
+  .vacancy-form-tooltip
+    max-width: 320px
+  .vacancy-bottom-flex
+    padding: 0 10px
+  .vacancy-main-bottom
+    width: calc(100% + 20px)
+    margin-left: -10px
+  .vacancy-form
+    padding: 0 10px
+  .team-slider-container, .team-slider
     width: 300px
 
 /*==========  Mobile First  ==========*/
