@@ -11,27 +11,27 @@
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
+	color: rgba(87, 96, 111, 0.5)
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: rgba(87, 96, 111, 0.5)
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: rgba(87, 96, 111, 0.5)
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: rgba(87, 96, 111, 0.5)
 	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+	color: rgba(87, 96, 111, 0.5)
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+	color: rgba(87, 96, 111, 0.5)
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
 	margin: 0
@@ -66,6 +66,7 @@ body
 	line-height: normal
 	font-family: "ProximaNova"
 	overflow-x: hidden
+	padding-top: 98px
 
 img
 	display: block
@@ -102,6 +103,15 @@ img
 		text-align: center
 		font-weight: bold
 		letter-spacing: 1px
+		&_big
+			display: inline-block
+			padding: 10px 100px
+			width: auto
+		&_right
+			margin-right: 37px
+		&_left
+			margin-left: 60px
+			animation-name: anim-img21
 	&_order
 		width: 100%
 		font-size: 20px
@@ -143,6 +153,14 @@ img
 	transition: left .3s ease
 .header
 	padding: 30px 0
+	position: fixed
+	background: #ffffff
+	width: 100vw
+	top: 0
+	left: 0
+	z-index: 4
+	&_blue
+		background: rgba(182, 202, 251, 0.12)
 	&-flex
 		display: flex
 		align-items: center
@@ -195,6 +213,9 @@ img
 		top: -6%
 		right: 0
 		transition: transform 2s ease
+		&_second
+			right: 35px
+			top: -45px
 	&-img23
 		position: absolute
 		left: 11%
@@ -266,8 +287,10 @@ img
 		left: 0
 		width: 100%
 		height: 100%
-		animation-iteration-count: infinite
+		animation-iteration-count: 2
+		animation-timing-function: linear
 		animation-duration: 2s
+		border-radius: 2px
 		&_first
 			background-color: rgba(49, 195, 99, 0.5)
 		&_second
@@ -293,11 +316,21 @@ img
 		transform: translate(66px, -135px)
 	100%
 		transform: translate(0, 0)
+@keyframes anim-img11_tablet
+  0%
+    transform: translate(52px, -108px)
+  100%
+    transform: translate(0, 0)
 @keyframes anim-img12
 	0%
 		transform: translate(-136px, -135px)
 	100%
 		transform: translate(0, 0)
+@keyframes anim-img12_tablet
+  0%
+    transform: translate(-110px, -110px)
+  100%
+    transform: translate(0, 0)
 @keyframes anim-img21
 	0%
 		opacity: 0
@@ -314,11 +347,11 @@ img
 		transform: translateX(0)
 @keyframes anim-height
 	0%
-		height: 50%
-	50%
 		height: 100%
-	100%
+	50%
 		height: 50%
+	100%
+		height: 100%
 .star1
 	position: absolute
 	left: 7.5%
@@ -339,6 +372,10 @@ img
 	position: absolute
 	left: -5%
 	bottom: -8%
+.star6
+	position: absolute
+	right: 3%
+	top: -31%
 .triangle1
 	position: absolute
 	right: -12%
@@ -351,14 +388,22 @@ img
 	position: absolute
 	left: 17%
 	top: -24%
+.circle2
+	width: 26px
+	height: 26px
+	background-image: linear-gradient(to left, #00f2fe, #4facfe)
+	border-radius: 50%
+	position: absolute
+	right: -2%
+	top: -6%
 .triangle2
 	position: absolute
 	right: 9%
 	top: -30%
 .triangle3
 	position: absolute
-	right: 9%
-	top: -30%
+	left: 5%
+	bottom: -25%
 .main
 	&-flex
 		display: flex
@@ -526,9 +571,37 @@ img
 			text-decoration: none
 			&:hover
 				text-decoration: underline
+@keyframes downGo
+	0%
+		transform: translateY(0)
+	50%
+		transform: translateY(5px)
+	100%
+		transform: translateY(0)
 .tech
 	padding: 155px 0 80px
 	position: relative
+	overflow: hidden
+	&-lines
+		position: absolute
+		width: 295px
+		height: 100px
+		bottom: 52px
+		left: 90px
+		&.down
+			animation-name: downGo
+			animation-duration: 1s
+	&-line
+		position: absolute
+		&_first
+			top: 0
+			right: 0
+		&_second
+			top: 12px
+			right: 0
+		&_third
+			right: 0
+			bottom: 0
 	&:before
 		content: ''
 		width: 1920px
@@ -566,6 +639,22 @@ img
 			&_fourth
 				right: -30px
 				top: -15px
+			&_fifth
+				left: 15px
+				top: 50px
+			&_sixth
+				width: 26px
+				height: 26px
+				border-radius: 50%
+				background-image: linear-gradient(297deg, #fbab7e, #f7ce68)
+				top: 12px
+				left: 170px
+			&_seventh
+				top: 12px
+				right: 155px
+			&_eight
+				right: 15px
+				top: 65px
 	&-title
 		margin-bottom: 20px
 	&-list
@@ -679,6 +768,7 @@ img
 	&-content
 		padding: 75px 0 30px
 		background: #ffffff
+		overflow: hidden
 		&_top
 			margin-top: -70px
 		&_blue
@@ -732,17 +822,17 @@ img
 			top: 140px
 			right: 45px
 		&_eleven
-			top: 80px
+			top: 160px
 			left: 135px
 		&_twelve
 			top: -5px
 			left: 150px
 		&_thirteen
-			bottom: 205px
+			bottom: 160px
 			left: 155px
 		&_fourteen
 			right: 285px
-			top: 45px
+			top: 65px
 		&_fifteen
 			right: 185px
 			top: 25px
@@ -752,6 +842,7 @@ img
 
 .advantages
 	padding-bottom: 100px
+	overflow: hidden
 	&-subtitle
 		text-align: center
 		position: relative
@@ -792,7 +883,7 @@ img
 			width: 80px
 			height: 80px
 			border-radius: 21px
-			border: 1px solid rgba(88, 105, 248, 0.3)
+			border: 2px solid rgba(88, 105, 248, 0.3)
 			display: flex
 			align-items: center
 			justify-content: center
@@ -807,9 +898,29 @@ img
 .overflov-img
 	max-width: calc(100% + 60px)
 	margin: -10px 0 0px -30px
+@keyframes book1
+	0%
+		transform: translate(-398px, 60px)
+	100%
+		transform: translate(0, 0)
+@keyframes book2
+	0%
+		transform: translate(-90px, -5px)
+	100%
+		transform: translate(0, 0)
+@keyframes book3
+	0%
+		transform: translate(-245px, 40px)
+	100%
+		transform: translate(0, 0)
+@keyframes book4
+	0%
+		transform: translate(-62px, 6px)
+	100%
+		transform: translate(0, 0)
 .standart
 	&-main
-		background: url(../img/standart_bg.jpg) no-repeat center
+		background: url(../img/standart_bg.png) no-repeat center
 		background-size: cover
 		border-radius: 10px
 		overflow: hidden
@@ -818,6 +929,101 @@ img
 			max-width: 420px
 			margin: 0 auto
 			text-align: center
+	&-animate
+		margin: 45px 0 50px
+		position: relative
+		&-book
+			width: 270px
+		&-img
+			position: absolute
+			font-size: 26px
+			&_first
+				top: 90px
+				left: 227px
+				width: 120px
+				animation-name: book2
+			&_second
+				left: 335px
+				top: -15px
+				width: 35px
+				animation-name: book3
+			&_third
+				right: 95px
+				top: 20px
+				width: 100px
+				animation-name: book1
+			&_fourth
+				left: 210px
+				top: 5px
+				width: 95px
+				animation-name: book4
+		&-text
+			color: #5869F8
+			background: #EEEFFE
+			font-weight: 600
+			display: inline-block
+			padding: 2px 10px
+			border-radius: 3px
+			position: absolute
+			&_first
+				left: 380px
+				top: -10px
+			&_second
+				left: 317px
+				top: 42px
+			&_third
+				left: 350px
+				top: 140px
+			&_fourth
+				left: 515px
+				top: 62px
+	&-img
+		position: absolute
+		&_first
+			top: 195px
+			left: -140px
+		&_second
+			top: 220px
+			right: -190px
+		&_third
+			width: 34px
+			height: 34px
+			border-radius: 50%
+			background-image: linear-gradient(297deg, #fbab7e, #f7ce68)
+			top: 110px
+			right: -195px
+		&_fourth
+			right: -155px
+			top: 515px
+		&_fifth
+			bottom: 140px
+			left: -230px
+			z-index: -1
+		&_sixth
+			top: -125px
+			left: -215px
+		&_seventh
+			bottom: 125px
+			right: -125px
+		&_eight
+			bottom: 250px
+			right: -190px
+		&_ninth
+			top: -65px
+			right: -190px
+		&_ten
+			top: 130px
+			right: -230px
+		&_eleven
+			left: -180px
+			bottom: 320px
+			z-index: -1
+		&_twelve
+			left: -120px
+			bottom: 100px
+		&_thirteen
+			right: -220px
+			bottom: 30px
 	&-title
 		margin-bottom: 20px
 	&-btn
@@ -830,6 +1036,14 @@ img
 		border-bottom: 1px solid rgba(196, 203, 212, 0.5)
 		&-item
 			margin-top: 75px
+			position: relative
+		&-overlay
+			height: 950px
+			width: 100%
+			top: -560px
+			background: #f6f8fe
+			position: absolute
+			z-index: -2
 		&-block
 			max-width: 807px
 			border-radius: 10.5px
@@ -838,6 +1052,7 @@ img
 			margin: 0 auto
 			border: 7px solid rgba(181, 201, 249, 0.2)
 			padding: 60px 95px 60px
+			position: relative
 			&_last
 				padding-bottom: 15px
 		&-text
@@ -856,12 +1071,138 @@ svg
 	overflow: hidden
 .services
 	padding: 125px 0 130px
+	background: url(../img/services.png) no-repeat center
+	&-svg
+		position: absolute
+		&_first
+            top: -35px
+            left: 35px
+		&_second
+			top: 110px
+			left: -53px
+		&_third
+			top: -37px
+			left: 10px
+		&_fourth
+			top: -67px
+			left: 245px
+		&_fifth
+			top: -50px
+			left: 185px
+		&_sixth
+			width: 25px
+			height: 25px
+			border-radius: 50%
+			background-image: linear-gradient(to left, #00f2fe, #4facfe)
+			top: -10px
+			right: 45px
+	&-anim
+		&_first
+			margin: 185px 0 30px 45px
+			position: relative
+			padding-bottom: 70px
+			width: 395px
+		&_second
+			margin: 115px 0 25px 44px
+			width: 395px
+			position: relative
+	&-anim1
+		animation-name: anim-img35
+	&-anim2
+		position: absolute
+		top: -28px
+		right: 12px
+		animation-name: anim-img21
+	&-anim3
+		position: absolute
+		left: -18px
+		bottom: 30px
+		animation-name: anim-img35
+	&-anim4
+		position: absolute
+		top: 55px
+		left: 40px
+		animation-name: anim-img35
+	&-anim5
+		position: absolute
+		right: 0
+		top: 55px
+		animation-name: anim-img21
+	&-anim6
+		position: absolute
+		left: 165px
+		top: 25px
+		animation-name: anim-img21
+	&-anim7
+		animation-name: anim-img35
+	&-anim8
+		position: absolute
+		top: 60px
+		left: 45px
+		animation-name: anim-img35
+	&-anim9
+		position: absolute
+		right: 0
+		top: 120px
+		animation-name: anim-img21
+	&-anim10
+		position: absolute
+		top: -40px
+		left: 123px
+		animation-name: anim-img35
+	&-anim11
+		position: absolute
+		bottom: 2px
+		left: 192px
+		animation-name: anim-img21
+	&-anim12
+		position: absolute
+		left: 90px
+		bottom: 2px
+		animation-name: anim-img35
+	&-anim13
+		position: absolute
+		top: -2px
+		left: 231px
+		animation-name: anim-img21
+	&-anim14
+		width: 33px
+		left: 32%
+		bottom: 35%
+		height: 53px
+		animation-name: anim-img35
+	&-anim15
+		width: 33px
+		left: 44%
+		bottom: 35%
+		height: 72px
+		animation-name: anim-img35
+	&-anim16
+		width: 33px
+		left: 56%
+		bottom: 35%
+		height: 96px
+		animation-name: anim-img35
+	&-anim17
+		position: absolute
+		left: 87px
+		top: 120px
+		animation-name: anim-img35
 	&-flex
 		display: flex
 		&_end
 			flex-direction: row-reverse
+	&-img
+		&_first
+			display: inline-block
+			margin: 15px 5px 0 0
+		&_second
+			display: inline-block
+			margin: 185px 0 0 0
+			position: relative
 	&-block
 		width: 50%
+		position: relative
 		&_right
 			text-align: right
 	&-title
@@ -879,6 +1220,7 @@ svg
 			color: #5869f8
 	&-content
 		padding: 65px 0 60px
+		overflow: hidden
 		&_blue
 			background: rgba(182, 202, 251, 0.12)
 		&_pad
@@ -905,6 +1247,9 @@ svg
 			top: 13px
 .distribut
 	padding: 70px 0 10px
+	.container
+		position: relative
+		overflow: hidden
 	&-list
 		margin-top: 50px
 	&-item
@@ -925,9 +1270,37 @@ svg
 	&-img
 		display: inline-block
 		&_first
-			margin: 10px 0 0 115px
+			margin: 15px 0 0 115px
+			max-width: 813px
 		&_second
 			margin: 80px 0 0 40px
+	&-svg
+		position: absolute
+		&_first
+			top: 25px
+			left: 125px
+		&_second
+			bottom: 12px
+			left: 296px
+			width: 34px
+			height: 34px
+			border-radius: 50%
+			background-image: linear-gradient(297deg, #96e6a1, #d4fc79)
+		&_third
+			right: 190px
+			top: 40px
+		&_fourth
+			width: 25px
+			height: 25px
+			border-radius: 50%
+			background-image: linear-gradient(to left, #00f2fe, #4facfe)
+			right: 165px
+			top: 88px
+		&_fifth
+			left: 110px
+			top: 330px
+
+
 .sheme
 	display: flex
 	justify-content: space-between
@@ -983,7 +1356,8 @@ svg
 		&_third
 			width: 147px
 			height: 125px
-			background: url(../img/sheme2.png) no-repeat center
+			background: url(../img/sheme4.png) no-repeat center
+			background-size: contain
 		&_fourth
 			width: 200px
 			display: flex
@@ -991,7 +1365,7 @@ svg
 			justify-content: space-between
 			height: 176px
 			&_top
-				background: #5869f8
+				background: url(../img/sheme5.png) no-repeat center
 				width: 100%
 				height: 72px
 				border-radius: 10px
@@ -1019,7 +1393,7 @@ svg
 					top: 50px
 					transform: rotate(45deg)
 			&_bottom
-				background: #5869f8
+				background: url(../img/sheme5.png) no-repeat center
 				width: 100%
 				height: 72px
 				border-radius: 10px
@@ -1056,6 +1430,7 @@ svg
 		letter-spacing: 1px
 .career
 	padding: 140px 0 135px
+	background: url(../img/career.png) no-repeat center
 	&-content
 		padding: 75px 0 40px
 		position: relative
@@ -1194,8 +1569,16 @@ svg
 			line-height: 1.5
 			color: #57606f
 			padding-left: 22px
+			&_first
+				background: url(../img/pin1.svg) no-repeat left 3px center
+			&_second
+				background: url(../img/pin3.svg) no-repeat left 3px center
+			&_third
+				background: url(../img/pin2.svg) no-repeat left 3px center
 	&-subitem
 		margin-bottom: 20px
+.career-slider .slick-dots li button:hover:before
+	background: rgba(255, 255, 255, 0.8)
 .team
 	&-mask
 		position: relative
@@ -1267,6 +1650,15 @@ svg
 			box-shadow: 0 2px 16px 0 rgba(88, 105, 248, 0.15)
 			background-color: #ffffff
 			padding: 35px 35px 35px 140px
+			&_first
+				background: url(../img/ava.png) no-repeat left 30px top 33px
+				background-size: 85px
+			&_second
+				background: url(../img/ava3.png) no-repeat left 30px top 33px
+				background-size: 85px
+			&_third
+				background: url(../img/ava3.png) no-repeat left 30px top 33px
+				background-size: 85px
 		&-text
 			font-size: 18px
 			line-height: 1.5
@@ -1300,6 +1692,18 @@ svg
 	&-item
 		width: 360px
 		text-align: center
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: 300px
+			height: 2px
+			background: rgba(88, 105, 248, 0.3)
+			top: 40px
+			right: -50%
+		&:last-child
+			&:after
+				display: none
 	&-title
 		font-size: 18px
 		line-height: 1.5
@@ -1373,6 +1777,15 @@ svg
 	background-color: rgba(182, 202, 251, 0.12)
 	padding: 75px 50px 40px
 	margin-top: 160px
+	position: relative
+	&-items
+		position: absolute
+		width: 270px
+		display: flex
+		justify-content: space-between
+		top: -33px
+		left: 50%
+		transform: translateX(-50%)
 	&-flex
 		display: flex
 	&-left
@@ -1387,4 +1800,636 @@ svg
 		color: #57606f
 		&_marg
 			margin-bottom: 30px
+.about
+	padding: 0 0 50px
+	border-bottom: 1px solid rgba(196, 203, 212, 0.5)
+	&-flex
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		padding-top: 80px
+		border-top: 1px solid rgba(196, 203, 212, 0.5)
+	&-left
+		width: 310px
+		margin-right: 105px
+		flex-shrink: 0
+		position: relative
+	&-line
+		width: 3px
+		height: 30px
+		position: absolute
+		background: #5869f8
+		left: 0
+		top: 0
+		transition: all .5s ease
+	&-menu
+		border-radius: 11px
+		box-shadow: 0 2px 16px 0 rgba(88, 105, 248, 0.15)
+		background-color: #ffffff
+		padding: 35px 40px 35px 30px
+		&-link
+			font-size: 18px
+			line-height: 1.5
+			color: #5869f8
+			text-decoration: none
+			&.active
+				font-weight: 600
+		&-item
+			margin-bottom: 27px
+			&:last-child
+				margin-bottom: 0
+	&-right
+		width: 600px
+		margin-top: -10px
+	&-title
+		margin-bottom: 55px
+	&-block
+		margin-bottom: 70px
+		position: relative
+	&-svg
+		position: absolute
+		&_first
+			right: -150px
+			top: -125px
+		&_second
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background-image: linear-gradient(297deg, #fbab7e, #f7ce68)
+			right: -163px
+			top: 105px
+		&_third
+			top: 100px
+			right: -80px
+		&_fourth
+			top: 5px
+			right: -197px
+		&_fifth
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background-image: linear-gradient(to bottom, #fbc2eb, #a18cd1)
+			bottom: 100px
+			right: -120px
+		&_sixth
+			bottom: -40px
+			right: -140px
+		&_seventh
+			right: -190px
+			top: 200px
+		&_eight
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background-image: linear-gradient(to left, #38f9d7, #43e97b)
+			right: -100px
+			top: 300px
+		&_ninth
+			bottom: 250px
+			right: -150px
+		&_ten
+			bottom: 120px
+			right: -150px
+		&_eleven
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background-image: linear-gradient(297deg, #fbab7e, #f7ce68)
+			top: 50px
+			right: -160px
+		&_twelve
+			top: 20px
+			right: -120px
+	&-subtitle
+		font-size: 30px
+		line-height: 1.53
+		color: #323647
+	&-text
+		font-size: 20px
+		line-height: 1.5
+		color: #57606f
+		margin-top: 20px
+		&_big
+			margin-top: 30px
+		&_sm
+			margin-top: 0
+	&-list
+		margin-top: 25px
+	&-item
+		font-size: 18px
+		line-height: 1.5
+		color: #57606f
+		padding-left: 90px
+		margin-bottom: 25px
+		&:first-child
+			background: url(../img/chip.svg) no-repeat left center
+		&:last-child
+			margin-bottom: 0
+			background: url(../img/checklist.svg) no-repeat left 10px center
+		.text-bold
+			font-weight: 600
+	&-subitem
+		font-size: 18px
+		line-height: 1.5
+		color: #57606f
+		padding-left: 35px
+		margin-bottom: 13px
+		position: relative
+		&:before
+			position: absolute
+			width: 18px
+			height: 2px
+			content: ''
+			display: block
+			background: #5869f8
+			left: 3px
+			top: 13px
+	&-sublist
+		margin-top: 35px
+.vacancy
+	padding-bottom: 70px
+	border-bottom: 1px solid rgba(196, 203, 212, 0.5)
+	&-top
+		background: rgba(182, 202, 251, 0.12)
+		text-align: center
+		padding: 0 0 50px
+		&-block
+			border-top: 1px solid rgba(196, 203, 212, 0.5)
+			padding-top: 65px
+			position: relative
+		&-img
+			width: 77px
+			height: 77px
+			border-radius: 50%
+			margin: 37px auto 0
+		&-link
+			font-size: 18px
+			line-height: 1.17
+			letter-spacing: -0.2px
+			color: #5869f8
+			text-decoration: none
+			position: absolute
+			top: 70px
+			left: 0
+	&-subtitle
+		max-width: 500px
+		margin: 0 auto
+	&-main
+		margin-top: 70px
+		&-block
+			max-width: 810px
+			margin: 0 auto
+			border: 7px solid rgba(181, 201, 249, 0.2)
+			border-radius: 11px
+		&-top
+			padding: 50px 75px 15px 95px
+		&-title
+			font-size: 30px
+			line-height: 1.53
+			color: #323647
+			text-align: center
+			margin-bottom: 40px
+			&_sm
+				margin-bottom: 25px
+		&-subtitle
+			font-size: 18px
+			font-weight: 600
+			line-height: 1.5
+			color: #323647
+		&-text
+			font-size: 18px
+			line-height: 1.5
+			color: #57606f
+			margin-bottom: 50px
+		&-bottom
+			padding: 45px 75px 65px 95px
+			background: rgba(182, 202, 251, 0.12)
+	&-list
+		margin: 10px 0 50px
+	&-item
+		font-size: 18px
+		line-height: 1.5
+		color: #57606f
+		margin-bottom: 9px
+		padding-left: 35px
+		position: relative
+		&:before
+			position: absolute
+			width: 18px
+			height: 2px
+			content: ''
+			display: block
+			background: #5869f8
+			left: 3px
+			top: 13px
+	&-bottom
+		&-text
+			font-size: 18px
+			line-height: 1.5
+			color: #57606f
+		&-flex
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+		&-img
+			width: 59px
+			height: 59px
+			border-radius: 50%
+			margin: 3px 25px 0 0
+	&-form
+		margin-top: 30px
+		&-block
+			position: relative
+		&-input
+			width: 100%
+			border: 2px solid rgba(87, 96, 111, 0.12)
+			border-radius: 4px
+			font-size: 20px
+			height: 48px
+			line-height: 48px
+			padding: 0 15px
+			color: rgba(87, 96, 111, 0.5)
+			outline: none
+		&-textarea
+			width: 100%
+			border: 2px solid rgba(87, 96, 111, 0.12)
+			border-radius: 4px
+			color: rgba(87, 96, 111, 0.5)
+			font-size: 20px
+			font-family: "ProximaNova"
+			padding: 10px 15px
+			resize: none
+			min-height: 97px
+			outline: none
+			margin-top: 25px
+		&-checkbox
+			width: 20px
+			height: 20px
+			position: absolute
+			opacity: 0
+			left: -2px
+			top: 1px
+			z-index: 2
+			&:checked ~ .vacancy-form-check
+				.vacancy-form-ok
+					opacity: 1
+		&-check
+			display: block
+			width: 23px
+			height: 23px
+			border: 2px solid rgba(87, 96, 111, 0.12)
+			border-radius: 4px
+			flex-shrink: 0
+			margin-right: 15px
+			position: relative
+			z-index: 1
+		&-text
+			font-size: 18px
+			line-height: 1.5
+			color: rgba(87, 96, 111, 0.5)
+		&-group
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			position: relative
+			margin-top: 15px
+		&-tooltip
+			width: 345px
+			box-shadow: 0 2px 16px 0 rgba(88, 105, 248, 0.15)
+			background-color: #ffffff
+			position: absolute
+			top: -80px
+			left: -10px
+			border-radius: 4px
+			padding: 10px
+			z-index: 2
+		&-row
+			display: flex
+			justify-content: space-between
+			margin-top: 20px
+		&-custom
+			cursor: pointer
+			width: 50%
+			margin-right: 30px
+			font-size: 20px
+			padding: 10px 0
+			position: relative
+		&-file
+			position: absolute
+			opacity: 0
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			cursor: pointer
+		&-btn
+			width: 50%
+			font-weight: 600
+			letter-spacing: 1.5px
+		&-ok
+			width: 22px
+			height: 22px
+			display: block
+			position: absolute
+			background: url(../img/ok.svg) no-repeat center right
+			border-radius: 4px
+			top: -4px
+			left: 2px
+			opacity: 0
+.vacancy-top-link:hover .line
+	left: -5px
+.tooltip
+	&:before
+		position: absolute
+		content: ''
+		border: 10px solid transparent
+		border-top: 10px solid #ffffff
+		bottom: -20px
+		left: 11px
+	&_center
+		max-width: 100%
+		left: 50%
+		transform: translateX(-50%)
+		width: 380px
+		min-height: 62px
+		display: flex
+		align-items: center
+		&:before
+			left: calc(50% - 5px)
+		.tooltip-text
+			max-width: 100%
+			padding-right: 30px
+	&-text
+		font-size: 18px
+		line-height: 1.17
+		color: #57606f
+		max-width: 220px
+		text-align: left
+	&-line
+		width: 25px
+		height: 2px
+		background: rgba(87, 96, 111, 0.2)
+		left: -2px
+		top: 10px
+		&_top
+			transform: rotate(-45deg)
+			position: absolute
+		&_bottom
+			transform: rotate(45deg)
+			position: absolute
+	&-close
+		width: 20px
+		height: 20px
+		position: absolute
+		top: 20px
+		right: 15px
+		cursor: pointer
+@keyframes rotate
+	0
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)
+.contact
+	padding: 150px 0 80px
+	position: relative
+	&-overlay
+		position: absolute
+		width: 100%
+		height: 100%
+		top: -50px
+		left: 0
+		background: url(../img/contact_bg.png) no-repeat center top
+		background-size: cover
+		z-index: -1
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 70%
+			background: linear-gradient(to bottom, transparent, #ffffff)
+	&-block
+		width: 807px
+		background-color: #ffffff
+		margin: 0 auto
+		padding: 50px 45px 80px
+		border: 7px solid rgba(181, 201, 249, 0.2)
+		border-radius: 11px
+		position: relative
+	&-svg
+		position: absolute
+		animation-name: rotate
+		animation-iteration-count: infinite
+		animation-duration: 20s
+		animation-timing-function: linear
+		&_first
+			top: 32px
+			left: 100px
+		&_second
+			top: -10px
+			left: 222px
+		&_third
+			top: 14px
+			right: 145px
+		&_fourth
+			top: -23px
+			right: 89px
+		&_fifth
+			right: -12px
+			top: 73px
+		&_sixth
+			width: 21px
+			height: 21px
+			border-radius: 50%
+			background-image: linear-gradient(297deg, #fbab7e, #f7ce68)
+			top: 40px
+			right: 85px
+
+	&-img
+		position: absolute
+		&_first
+			top: -30px
+			left: 125px
+			transform: rotate(40deg)
+		&_second
+			top: -19px
+			right: -31px
+		&_third
+			top: -47px
+			left: -49px
+		&_fourth
+			top: -15px
+			left: 293px
+	&-title
+		text-align: center
+		padding-bottom: 10px
+	&-row
+		display: flex
+		justify-content: space-between
+		margin-top: 40px
+	&-text
+		font-size: 18px
+		line-height: 1.5
+		color: #57606f
+	&-subtitle
+		font-size: 18px
+		line-height: 1.5
+		font-weight: 600
+		color: #323647
+	&-item
+		padding-left: 25px
+		width: 285px
+		&_first
+			background: url(../img/pin1.svg) no-repeat left 5px top 5px
+		&_second
+			background: url(../img/pin3.svg) no-repeat left 5px top 5px
+		&_third
+			background: url(../img/pin2.svg) no-repeat left 5px top 5px
+	&-link
+		font-size: 18px
+		line-height: 1.5
+		color: #5869f8
+		text-decoration: none
+	&-social
+		max-width: 85px
+		margin: 10px 0 0
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.5)
+	display: flex
+	align-items: center
+	justify-content: center
+	z-index: 3
+	opacity: 0
+	pointer-events: none
+	transition: all .5s ease
+	&.active
+		opacity: 1
+		pointer-events: auto
+	&-block
+		width: 600px
+		background-color: #ffffff
+		border-radius: 11px
+		padding: 60px 80px 80px
+		position: relative
+	&-title
+		text-align: center
+		font-size: 30px
+		line-height: 1.53
+		color: #323647
+	&-form
+		margin-top: 30px
+	&-btn
+		width: 100%
+		font-weight: 600
+		padding: 10px 0
+		margin-top: 15px
+		font-size: 20px
+	&-close
+		width: 27px
+		height: 27px
+		cursor: pointer
+		position: absolute
+		top: 30px
+		right: 30px
+		&-line
+			width: 34px
+			height: 2px
+			background: #5869f8
+			&_top
+				transform: rotate(-45deg)
+				position: absolute
+				top: 10px
+				left: -5px
+			&_bottom
+				transform: rotate(45deg)
+				position: absolute
+				top: 10px
+				left: -5px
+	&-svg
+		position: absolute
+		&_first
+			top: 35px
+			left: 70px
+		&_second
+			top: 15px
+			left: 195px
+		&_third
+			top: -18px
+			left: 235px
+		&_fourth
+			top: 57px
+			left: -37px
+		&_fifth
+			top: -26px
+			left: 92px
+		&_sixth
+			top: -50px
+			left: -73px
+.error
+	text-align: center
+	display: flex
+	align-items: center
+	min-height: 100vh
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	&-container
+		max-width: 750px
+		margin: 0 auto
+	&-block
+		margin-top: 55px
+	&-title
+		font-size: 36px
+		font-weight: 600
+		line-height: 1.17
+		color: #323647
+		margin-top: 45px
+	&-text
+		font-size: 20px
+		line-height: 1.5
+		color: #57606f
+		margin-top: 15px
+	&-link
+		font-size: 20px
+		line-height: 1.5
+		color: #5869f8
+		text-decoration: none
+.menu
+	&-open
+		width: 27px
+		height: 22px
+		margin-left: 30px
+		position: relative
+		cursor: pointer
+		display: none
+	&-line
+		position: absolute
+		width: 100%
+		border-radius: 1px
+		height: 2px
+		background-color: #57606f
+		left: 0
+		transition: all .2s ease
+		&_top
+			top: 0
+		&_center
+			top: 50%
+			transform: translateY(-50%)
+		&_bottom
+			bottom: 0
+.show-tablet
+	display: none
+.show480
+	display: none
+.footer-subitem img
+	margin-right: 5px
+.tech-mob
+	display: none
 @import "media" // Всегда в конце

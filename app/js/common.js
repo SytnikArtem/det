@@ -8,23 +8,21 @@ $(document).ready(function() {
         touchMove: true,
         responsive: [
             {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
                     variableWidth: true,
-                    arrows: false
+                    arrows: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                    slidesToShow: 1,
+                    variableWidth: true,
+                    arrows: false,
+                    dots: true
                 }
             }
         ]
@@ -86,30 +84,81 @@ $(document).ready(function() {
             .setTween(this, {y: speed, ease: Linear.easeNone})
             .addTo(controller2);
     });
+    $(".about-menu-link").click(function () {
+        $(this).addClass('active');
+        $(this).parent().siblings().find(".about-menu-link").removeClass('active');
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        $('html, body').animate({ scrollTop: destination }, 400);
+        positionLine();
+        return false;
+    });
+    function fixedBlock() {
+        var controller3 = new ScrollMagic.Controller();
+        var scene = new ScrollMagic.Scene({
+            triggerElement: ".about-flex",
+            // duration: "800",
+            offset: "-30",
+            triggerHook: "onLeave"
+        }).setPin(".about-left").addTo(controller3);
+    }
+    fixedBlock();
+    function positionLine() {
+        if($('.about-line').length > 0) {
+            var positionTop = $('.about-menu-link.active').position().top;
+            $('.about-line').css("top", positionTop);
+        }
+    }
+    positionLine();
+    $('.menu-open').click(function(){
+       $(this).toggleClass('active');
+       $('.header-list').toggleClass('active')
+    });
 });
+var lastScrollTop = 0;
 $(window).scroll(function(){
     var windowTop,
-        block,
         blockTop,
         windowHeight,
         items,
-        i,
         animDeg;
     function rotateBlock(){
-        windowTop = $(window).scrollTop();
-        blockTop = $('.main_rotate').offset().top;
-        windowHeight = $(window).height();
-        if (windowTop + windowHeight > blockTop) {
-            items = Math.ceil((windowTop + windowHeight - blockTop) / 180);
-            animDeg = items * 180;
-            $('.anim-img22').css({transform: 'rotateX(' + animDeg + 'deg)'});
-            console.log(items);
-        }
-        else {
-            $('.anim-img22').css({transform: 'rotateX(0deg)'});
+        if($('.main_rotate').length > 0) {
+            windowTop = $(window).scrollTop();
+            blockTop = $('.main_rotate').offset().top;
+            windowHeight = $(window).height();
+            if (windowTop + windowHeight > blockTop) {
+                items = Math.ceil((windowTop + windowHeight - blockTop) / 180);
+                animDeg = items * 180;
+                $('.anim-img22').css({transform: 'rotateX(' + animDeg + 'deg)'});
+            }
+            else {
+                $('.anim-img22').css({transform: 'rotateX(0deg)'});
+            }
         }
     }
-    // rotateBlock();
+    rotateBlock();
+
+    function transformLines() {
+        windowTop = $(window).scrollTop();
+        if($('.tech-block_chain').length > 0) {
+            blockTop = $('.tech-block_chain').offset().top;
+            if(windowTop + $(window).height() > blockTop && windowTop > lastScrollTop) {
+                console.log(lastScrollTop);
+                console.log(windowTop);
+                $('.tech-lines').addClass('down');
+                if($('.tech-lines').hasClass('down')) {
+                    $('.tech-lines').removeClass('down');
+                    setTimeout(function(){
+                        $('.tech-lines').addClass('down');
+                    }, 100);
+                }
+            }
+            lastScrollTop = windowTop;
+        }
+    }
+    transformLines();
+
     // function paralaxBlock() {
     //     block = $('.paralax');
     //     windowTop = $(window).scrollTop();
@@ -122,4 +171,5 @@ $(window).scroll(function(){
     //
     // }
     // paralaxBlock();
+
 });

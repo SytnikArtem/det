@@ -14,7 +14,8 @@
 </head>
 
 <body>
-<!-- header.html -->
+
+	<!-- header.html -->
 <header class="header">
 	<div class="container">
 		<div class="header-flex">
@@ -52,151 +53,247 @@
 					<li class="header-item">
 						<a href="" class="header-item-link">О компании</a>
 					</li>
+					<li class="header-item show-tablet">
+						<a href="" class="header-item-link">Карьера</a>
+					</li>
+					<li class="header-item show-tablet">
+						<a href="" class="header-item-link">Контакты</a>
+					</li>
+					<button type="button" class="header-btn btn show480">Связаться с нами</button>
 				</ul>
 				<button type="button" class="header-btn btn">Связаться с нами</button>
+				<div class="menu-open">
+					<div class="menu-line menu-line_top"></div>
+					<div class="menu-line menu-line_center"></div>
+					<div class="menu-line menu-line_bottom"></div>
+				</div>
 			</div>
+		</div>
+	</div>
+	<div class="popup">
+		<div class="popup-block">
+			<h2 class="popup-title">Связаться с нами</h2>
+			<form action="" class="popup-form">
+				<div class="vacancy-form-block">
+					<div class="vacancy-form-tooltip tooltip tooltip_center">
+						<p class="tooltip-text">Мы пришлем вам ответ на этот адрес</p>
+						<div class="tooltip-close">
+							<div class="tooltip-line tooltip-line_top"></div>
+							<div class="tooltip-line tooltip-line_bottom"></div>
+						</div>
+					</div>
+					<input type="email" class="vacancy-form-input" placeholder="Электронная почта" required>
+				</div>
+				<textarea type="text" class="vacancy-form-textarea" placeholder="Ваше сообщение"></textarea>
+				<button type="submit" class="btn btn_blue popup-btn">Отправить</button>
+			</form>
+			<div class="popup-close">
+				<div class="popup-close-line popup-close-line_top"></div>
+				<div class="popup-close-line popup-close-line_bottom"></div>
+			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" class="popup-svg popup-svg_first" width="28" height="28" viewBox="0 0 28 28">
+				<defs>
+					<linearGradient id="ap1" x1="100%" x2="0%" y1="75.729%" y2="24.239%">
+						<stop offset="0%" stop-color="#96E6A1"/>
+						<stop offset="100%" stop-color="#D4FC79"/>
+					</linearGradient>
+					<rect id="b" width="132" height="76" rx="4"/>
+					<rect id="d" width="79.227" height="45.615" rx="4"/>
+				</defs>
+				<g fill="none" fill-rule="evenodd">
+					<path fill="url(#ap1)" d="M468.878 340.025l-5.866 3.876a3 3 0 0 1-4.157-4.157l3.876-5.866-3.876-5.866a3 3 0 0 1 4.157-4.157l5.866 3.876 5.866-3.876a3 3 0 0 1 4.157 4.157l-3.876 5.866 3.876 5.866a3 3 0 0 1-4.157 4.157l-5.866-3.876z" transform="rotate(-45 -144.896 723.111)"/>
+				</g>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" class="popup-svg popup-svg_second" width="16" height="18" viewBox="0 0 16 18">
+				<defs>
+					<linearGradient id="ap2" x1="100%" x2="0%" y1="75.729%" y2="24.239%">
+						<stop offset="0%" stop-color="#8FD3F4"/>
+						<stop offset="100%" stop-color="#84FAB0"/>
+					</linearGradient>
+				</defs>
+				<g fill="none" fill-rule="evenodd">
+					<path fill="url(#ap2)" d="M587.91 303.707l3.862 7.565a4 4 0 0 1-3.562 5.819h-7.724a4 4 0 0 1-3.563-5.819l3.862-7.565a4 4 0 0 1 7.125 0z" transform="rotate(-24 -412.699 1518.446)"/>
+				</g>
+			</svg>
+			<img src="img/wave.png" alt="" class="popup-svg popup-svg_third">
+			<img src="img/mail1.png" alt="" class="popup-svg popup-svg_fourth">
+			<img src="img/mail2.png" alt="" class="popup-svg popup-svg_fifth">
+			<img src="img/mail3.png" alt="" class="popup-svg popup-svg_sixth">
 		</div>
 	</div>
 </header>
-<section class="distribut parallax-scene">
-	<div class="container">
-		<div class="tech-main">
-			<div class="tech-main-svg tech-main-svg_first parallax" data-parallax="-5">
-				<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
-					<defs>
-						<linearGradient id="aaa" x1="100%" x2="0%" y1="75.729%" y2="24.239%">
-							<stop offset="0%" stop-color="#96e6a1"/>
-							<stop offset="100%" stop-color="#d4fc79"/>
-						</linearGradient>
-					</defs>
-					<g fill="none" fill-rule="evenodd">
-						<path fill="transparent" d="M-183-849h1366v3331H-183z"></path>
-						<path fill="url(#aaa)" d="M202.5 875.989l-9.821 6.489a3 3 0 0 1-4.157-4.157l6.49-9.821-6.49-9.821a3 3 0 0 1 4.157-4.157l9.821 6.49 9.821-6.49a3 3 0 0 1 4.157 4.157l-6.49 9.821 6.49 9.821a3 3 0 0 1-4.157 4.157l-9.821-6.49z" transform="rotate(-45 -913.834 664.9)"></path>
-					</g>
-				</svg>
-			</div>
-			<div class="tech-main-svg tech-main-svg_second parallax" data-parallax="5"></div>
-			<div class="tech-main-svg tech-main-svg_third parallax" data-parallax="8">
-				<svg xmlns="http://www.w3.org/2000/svg" width="33px" height="36px" viewBox="0 0 33 36" version="1.1">
-					<title>Triangle 3 Copy 2</title>
-					<desc>Created with Sketch.</desc>
-					<defs>
-						<linearGradient x1="100%" y1="75.7294004%" x2="0%" y2="24.2389356%" id="linearGradient-1">
-							<stop stop-color="#F5576C" offset="0%"></stop>
-							<stop stop-color="#F093FB" offset="100%"></stop>
-						</linearGradient>
-					</defs>
-					<g id="Current" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-						<g id="DET-Desktop-Technology-1920" transform="translate(-1068.000000, -1682.000000)" fill="url(#linearGradient-1)">
-							<path d="M1091.81255,1683.67493 L1104.81674,1708.5952 C1105.83876,1710.55371 1105.07957,1712.96991 1103.12106,1713.99193 C1102.54978,1714.29004 1101.91492,1714.44572 1101.27054,1714.44572 L1075.26215,1714.44572 C1073.05301,1714.44572 1071.26215,1712.65486 1071.26215,1710.44572 C1071.26215,1709.80133 1071.41783,1709.16648 1071.71595,1708.5952 L1084.72014,1683.67493 C1085.74215,1681.71641 1088.15835,1680.95723 1090.11687,1681.97925 C1090.84221,1682.35775 1091.43404,1682.94958 1091.81255,1683.67493 Z" id="Triangle-3-Copy-2" transform="translate(1088.266741, 1697.945721) rotate(18.000000) translate(-1088.266741, -1697.945721) "></path>
-						</g>
-					</g>
-				</svg>
-			</div>
-			<div class="tech-main-svg tech-main-svg_fourth parallax" data-parallax="10">
-				<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
-					<defs>
-						<linearGradient id="aaa2" x1="100%" x2="0%" y1="75.729%" y2="24.239%">
-							<stop offset="0%" stop-color="#38f9d7"></stop>
-							<stop offset="100%" stop-color="#43e97b"></stop>
-						</linearGradient>
-					</defs>
-					<g fill="none" fill-rule="evenodd">
-						<path fill="transparent" d="M-183-849h1366v3331H-183z"></path>
-						<path fill="url(#aaa2)" d="M202.5 875.989l-9.821 6.489a3 3 0 0 1-4.157-4.157l6.49-9.821-6.49-9.821a3 3 0 0 1 4.157-4.157l9.821 6.49 9.821-6.49a3 3 0 0 1 4.157 4.157l-6.49 9.821 6.49 9.821a3 3 0 0 1-4.157 4.157l-9.821-6.49z" transform="rotate(-45 -913.834 664.9)"></path>
-					</g>
-				</svg>
-			</div>
-			<h1 class="title tech-title">Дистрибуция контента</h1>
-			<p class="text tech-text">Поднимите качество вашего учебного процесса за счет использования адаптивных курсов</p>
-			<div class="main-left-flex main-left-flex_tech">
-				<button class="btn btn_services btn_blue">Связаться с нами</button>
-			</div>
-		</div>
-		<div class="distribut-sheme sheme">
-			<div class="sheme-item sheme-item_first">
-				<p class="sheme-text">Продавайте или обменевайтесь курсами с друними учебными заведениями</p>
-			</div>
-			<div class="sheme-item sheme-item_second">
-				<p class="sheme-text">Создавайте адаптивные курсы</p>
-			</div>
-			<div class="sheme-item sheme-item_third">
-				<p class="sheme-text">Обучайте студентов</p>
-			</div>
-			<div class="sheme-item sheme-item_fourth">
-				<div class="sheme-item_fourth_top">
-					<p class="sheme-text">Через вашу платформу</p>
+	<section class="section about">
+		<div class="container">
+			<div class="about-flex">
+				<div class="about-left">
+					<ul class="about-menu">
+						<li class="about-menu-item">
+							<a href="#who" class="about-menu-link active">Кто мы?</a>
+						</li>
+						<li class="about-menu-item">
+							<a href="#mission" class="about-menu-link">В чем миссия?</a>
+						</li>
+						<li class="about-menu-item">
+							<a href="#idea" class="about-menu-link">В чем идея?</a>
+						</li>
+						<li class="about-menu-item">
+							<a href="#do" class="about-menu-link">Что мы уже сделали?</a>
+						</li>
+						<li class="about-menu-item">
+							<a href="#do_now" class="about-menu-link">Что мы делаем сейчас?</a>
+						</li>
+						<li class="about-menu-item">
+							<a href="#price" class="about-menu-link">Что мы ценим больше всего?</a>
+						</li>
+					</ul>
+					<div class="about-line"></div>
 				</div>
-				<div class="sheme-item_fourth_bottom">
-					<p class="sheme-text">Используя цыфровой Университет DET</p>
+				<div class="about-right">
+					<h1 class="about-title title">О нас</h1>
+					<div class="about-block" id="who">
+						<h4 class="about-subtitle">Кто мы?</h4>
+						<p class="about-text">Digital Education Technology – команда, объединяющая талантливых разработчиков, педагогов и методистов из разных стран. Мы создаём универсальную онлайн-платформу <span class="nowrap">для персонализированного,</span> адаптивного обучения. <span class="nowrap">Она подходит</span> для школ и вузов, профессиональных курсов <span class="nowrap">и корпоративного</span> образования, может дополнять LMS и другие образовательные платформы.</p>
+						<svg class="about-svg about-svg_first parallax2" data-parallax="4" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+							<defs>
+								<linearGradient id="ab1" x1="50%" x2="50%" y1="0%" y2="105.254%">
+									<stop offset="0%" stop-color="#FBC2EB"/>
+									<stop offset="100%" stop-color="#A18CD1"/>
+								</linearGradient>
+							</defs>
+							<g fill="none" fill-rule="evenodd">
+								<path fill="url(#ab1)" d="M1216.5 195.98l-9.797 6.474a3 3 0 0 1-4.157-4.157l6.473-9.797-6.473-9.797a3 3 0 0 1 4.157-4.157l9.797 6.473 9.797-6.473a3 3 0 0 1 4.157 4.157l-6.473 9.797 6.473 9.797a3 3 0 0 1-4.157 4.157l-9.797-6.473z" transform="rotate(-45 413.999 1548.907)"/>
+							</g>
+						</svg>
+						<div class="about-svg about-svg_second parallax2" data-parallax="10"></div>
+					</div>
+					<div class="about-block" id="mission">
+						<h4 class="about-subtitle">В чем миссия?</h4>
+						<p class="about-text">Мы хотим сделать образование доступным, эффективным <span class="nowrap">и актуальным</span> для всех людей в мире, независимо <span class="nowrap">от их местоположения,</span> личных особенностей и социально-экономического класса.</p>
+						<svg class="about-svg about-svg_third parallax2" data-parallax="4" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+							<defs>
+								<linearGradient id="ab3" x1="100%" x2="0%" y1="0%" y2="100%">
+									<stop offset="0%" stop-color="#FFE29F"/>
+									<stop offset="47.873%" stop-color="#FFA99F"/>
+									<stop offset="100%" stop-color="#FF719A"/>
+								</linearGradient>
+							</defs>
+							<g fill="none" fill-rule="evenodd">
+								<path fill="url(#ab3)" d="M1152 761.32l-6.378 4.215a3 3 0 0 1-4.157-4.157l4.214-6.378-4.214-6.378a3 3 0 0 1 4.157-4.157l6.378 4.214 6.378-4.214a3 3 0 0 1 4.157 4.157l-4.214 6.378 4.214 6.378a3 3 0 0 1-4.157 4.157l-6.378-4.214z" transform="rotate(-45 -309.759 1757.48)"/>
+							</g>
+						</svg>
+					</div>
+					<div class="about-block" id="idea">
+						<h4 class="about-subtitle">В чем идея?</h4>
+						<p class="about-text">Эффективное обучение – индивидуально. Это значит, <span class="nowrap">что нужно учесть</span> и предыдущий опыт и уровень знаний студента, и его скорость обучения, интересы и мотивацию, особенности внимания и утомляемости. Для этого <span class="nowrap">мы используем:</span></p>
+						<ul class="about-list">
+							<li class="about-item"><span class="text-bold">Технологические инновации​​</span> —  алгоритмы искусственного интеллекта и машинного обучения подстраивают каждый следующий шаг курса под конкретного студента.</li>
+							<li class="about-item"><span class="text-bold">Педагогические и образовательные инновации</span>​​ — <span class="nowrap">мы разрабатываем</span> собственную методологию и
+								<a href="" class="career-link">формат адаптивного учебного контента</a>. Делим материал <span class="nowrap">на минимально</span> значимые части, микро-шаги, <span class="nowrap">из которых система</span> собирает индивидуальные курсы.</li>
+						</ul>
+						<svg class="about-svg about-svg_fourth parallax2" data-parallax="4" xmlns="http://www.w3.org/2000/svg" width="32" height="37" viewBox="0 0 32 37">
+							<defs>
+								<linearGradient id="ab4" x1="100%" x2="0%" y1="75.729%" y2="24.239%">
+									<stop offset="0%" stop-color="#96E6A1"/>
+									<stop offset="100%" stop-color="#D4FC79"/>
+								</linearGradient>
+							</defs>
+							<g fill="none" fill-rule="evenodd">
+								<path fill="url(#ab4)" d="M1275.546 895.216l13.012 24.933a4 4 0 0 1-3.547 5.851h-26.023a4 4 0 0 1-3.546-5.85l13.011-24.934a4 4 0 0 1 7.093 0z" transform="scale(-1 1) rotate(-24 -1477.47 3504.043)"/>
+							</g>
+						</svg>
+						<div class="about-svg about-svg_fifth parallax2" data-parallax="4" ></div>
+						<svg class="about-svg about-svg_sixth parallax2" data-parallax="4" xmlns="http://www.w3.org/2000/svg" width="32" height="37" viewBox="0 0 32 37">
+							<defs>
+								<linearGradient id="ab6" x1="100%" x2="0%" y1="75.729%" y2="24.239%">
+									<stop offset="0%" stop-color="#C2E9FB"/>
+									<stop offset="100%" stop-color="#A1C4FD"/>
+								</linearGradient>
+							</defs>
+							<g fill="none" fill-rule="evenodd">
+								<path fill="url(#ab6)" d="M1231.546 1418.216l13.012 24.933a4 4 0 0 1-3.547 5.851h-26.023a4 4 0 0 1-3.546-5.85l13.011-24.934a4 4 0 0 1 7.093 0z" transform="scale(-1 1) rotate(-24 -2729.73 3662.042)"/>
+							</g>
+						</svg>
+					</div>
+					<div class="about-block" id="do">
+						<h4 class="about-subtitle">Что мы уже сделали?</h4>
+						<p class="about-text">Мы стартовали в 2016 году, и для проверки нашей идеи – начали с проекта онлайн-университета иностранных языков <span class="nowrap">для Китая</span>. Рынок английского языка в Китае составляет одну пятую мирового рынка онлайн-образования – более 21 млрд. долларов, и ежегодно удваивает показатели роста.</p>
+						<p class="about-text about-text_big">Проект, который мы создали – образовательный комплекс <span class="nowrap">с конструктором</span> курсов, виртуальными аудиториями <span class="nowrap">и инновационным</span> тренажером для изучения иностранных слов.</p>
+						<p class="about-text about-text_sm">За время работы над ним мы:</p>
+						<ul class="about-sublist">
+							<li class="about-subitem">Собрали международную команду методистов и разработчиков;</li>
+							<li class="about-subitem">Получили лицензии на ведение образовательной деятельности <span class="nowrap">в Китае;</span></li>
+							<li class="about-subitem">Выросли профессионально, решив множество нетривиальных задач;</li>
+							<li class="about-subitem">Увеличили капитализацию компании;</li>
+							<li class="about-subitem">И вышли на российский корпоративный рынок.</li>
+						</ul>
+						<p class="about-text about-text_big">В конце 2017 года к нам присоединился «<a href="" class="career-link">Новый поток</a>» — со-инвестор, партнер и заказчик, российская частная группа компаний, занимающаяся добычей, переработкой, экспортом нефтепродуктов. </p>
+						<svg class="about-svg about-svg_seventh parallax2" data-parallax="4" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+							<defs>
+								<linearGradient id="ab7" x1="100%" x2="0%" y1="50%" y2="50%">
+									<stop offset="0%" stop-color="#FF7EB3"/>
+									<stop offset="100%" stop-color="#FF758C"/>
+								</linearGradient>
+							</defs>
+							<g fill="none" fill-rule="evenodd">
+								<path fill="url(#ab7)" d="M1257.5 1712.98l-9.797 6.474a3 3 0 0 1-4.157-4.157l6.473-9.797-6.473-9.797a3 3 0 0 1 4.157-4.157l9.797 6.473 9.797-6.473a3 3 0 0 1 4.157 4.157l-6.473 9.797 6.473 9.797a3 3 0 0 1-4.157 4.157l-9.797-6.473z" transform="rotate(-45 -1396.682 2356.898)"/>
+							</g>
+						</svg>
+						<div class="about-svg about-svg_eight parallax2" data-parallax="4"></div>
+						<svg class="about-svg about-svg_ninth parallax2" data-parallax="4" xmlns="http://www.w3.org/2000/svg" width="32" height="37" viewBox="0 0 32 37">
+							<defs>
+								<linearGradient id="ab9" x1="50%" x2="50%" y1="0%" y2="105.254%">
+									<stop offset="0%" stop-color="#FFD1FF"/>
+									<stop offset="100%" stop-color="#FAD0C4"/>
+								</linearGradient>
+							</defs>
+							<g fill="none" fill-rule="evenodd">
+								<path fill="url(#ab9)" d="M1228.546 2008.216l13.012 24.933a4 4 0 0 1-3.547 5.851h-26.023a4 4 0 0 1-3.546-5.85l13.011-24.934a4 4 0 0 1 7.093 0z" transform="scale(-1 1) rotate(-24 -4119.096 3949.985)"/>
+							</g>
+						</svg>
+						<svg class="about-svg about-svg_ten parallax2" data-parallax="4" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+							<defs>
+								<linearGradient id="ab10" x1="50%" x2="50%" y1="0%" y2="105.254%">
+									<stop offset="0%" stop-color="#FBC2EB"/>
+									<stop offset="100%" stop-color="#A18CD1"/>
+								</linearGradient>
+							</defs>
+							<g fill="none" fill-rule="evenodd">
+								<path fill="url(#ab10)" d="M1216.5 2162.98l-9.797 6.474a3 3 0 0 1-4.157-4.157l6.473-9.797-6.473-9.797a3 3 0 0 1 4.157-4.157l9.797 6.473 9.797-6.473a3 3 0 0 1 4.157 4.157l-6.473 9.797 6.473 9.797a3 3 0 0 1-4.157 4.157l-9.797-6.473z" transform="rotate(-45 -1960.38 2532.407)"/>
+							</g>
+						</svg>
+					</div>
+					<div class="about-block" id="do_now">
+						<h4 class="about-subtitle">Что мы делаем сейчас?</h4>
+						<p class="about-text">Разрабатываем технологические решения в сфере корпоративного образования для «Нового потока» и других крупных российских компаний, применяя наши технологические и методологические инновации. Следующим шагом станет создание интеллектуальной образовательной платформы, которой сможет пользоваться любой преподаватель и любая компания, любой студент и сотрудник.</p>
+						<div class="about-svg about-svg_eleven parallax2" data-parallax="4"></div>
+					</div>
+					<div class="about-block" id="price">
+						<h4 class="about-subtitle">Что мы ценим больше всего?</h4>
+						<p class="about-text">Есть несколько важных для нас вещей, которых придерживаемся:</p>
+						<ul class="about-sublist">
+							<li class="about-subitem">Вера в общую идею</li>
+							<li class="about-subitem">Вера в равнозначный потенциал людей</li>
+							<li class="about-subitem">Искренность и честность;</li>
+							<li class="about-subitem">Смелость;</li>
+							<li class="about-subitem">Взаимоподдержка.</li>
+						</ul>
+						<svg class="about-svg about-svg_twelve parallax2" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+							<defs>
+								<linearGradient id="ab12" x1="100%" x2="0%" y1="50%" y2="50%">
+									<stop offset="0%" stop-color="#FF7EB3"/>
+									<stop offset="100%" stop-color="#FF758C"/>
+								</linearGradient>
+							</defs>
+							<g fill="none" fill-rule="evenodd">
+								<path fill="url(#ab12)" d="M1185.5 2687.98l-9.797 6.474a3 3 0 0 1-4.157-4.157l6.473-9.797-6.473-9.797a3 3 0 0 1 4.157-4.157l9.797 6.473 9.797-6.473a3 3 0 0 1 4.157 4.157l-6.473 9.797 6.473 9.797a3 3 0 0 1-4.157 4.157l-9.797-6.473z" transform="rotate(-45 -2609.611 2757.487)"/>
+							</g>
+						</svg>
+					</div>
 				</div>
 			</div>
-			<div class="sheme-item sheme-item_fifth">
-				<p class="sheme-text">Экономьте время обучения, повышайте его качество и вовлеченность студентов</p>
-			</div>
 		</div>
-	</div>
-</section>
-<section class="services-content">
-	<div class="container">
-		<div class="services-flex">
-			<div class="services-block">
-				<h4 class="services-title">Разработка корпоративной библиотеки компетенций</h4>
-				<p class="services-text">Наличие актуальной библиотеки навыков позволит улучшить качество подбора персонала, расширить возможности при проведении оценки сотрудников, повысить эффективность тренингов и внутрикорпоративного обучения. Библиотека компетенций будет содержать сведения о ключевых навыках, необходимых для эффективного выполнения задач
-					каждым сотрудником, в соответствии со стратегическим планом развития вашей компании.</p>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="services-content services-content_blue">
-	<div class="container">
-		<div class="services-flex services-flex_end">
-			<div class="services-block">
-				<h4 class="services-title">Оценка персонала</h4>
-				<p class="services-text">Комплексная оценка и тестирование проводится на базе наших технологических решений, для ключевых позиций используются программы ассесcмента. В результате, по каждому сотруднику будет подготовлен развернутый отчет о его текущем уровне развития ключевых навыков, их соответствию занимаемой должности и о потенциале к развитию.</p>
-				<p class="services-text services-list-title">Комплексная оценка персонала поможет:</p>
-				<ul class="services-list">
-					<li class="services-text services-item">Сформировать знания о потенциале сотрудников для проведения качественных кадровых ротаций и создания кадрового резерва.</li>
-					<li class="services-text services-item">Снизить затраты на подбор и адаптацию персонала, уменьшить показатели текучести за счет внедрения внутренней ротации.</li>
-					<li class="services-text services-item">Сформировать программы развития и обучения сотрудников без отрыва от производственного процесса, повышения уровня мотивации персонала, степени его вовлеченности и уровня профессиональной эффективности.</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="services-content">
-	<div class="container">
-		<div class="services-flex">
-			<div class="services-block">
-				<h4 class="services-title">Корпоративное обучение и развитие персонала</h4>
-				<p class="services-text services-text_marg">DET сформирует персонализированные программы
-					по обучению и развитию ваших сотрудников, соответствующие
-					их персональным картам развития. Составит рекомендации
-					по выбору пакета обучения, отвечающие уровню подготовки специалиста, объему и типу рекомендованного обучения. Организует непрерывное обучение сотрудников необходимым им навыкам.</p>
-				<p class="services-text">Вы сможете регулировать объем проводимого обучения
-					для каждого сотрудника, выбирая размеры и типы образовательных пакетов, уточнять планы развития сотрудников, добавляя им в программу курсов те навыки,
-					по которым требуется немедленная актуализация. Вы получите полный доступ к статистике обучения своих сотрудников, включая, в том числе, оценку текущего уровня развития
-					их навыков и прогресс в обучении.</p>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="services-content services-content_blue">
-	<div class="container">
-		<div class="services-flex services-flex_end">
-			<div class="services-block">
-				<h4 class="services-title">Технологические решения<br> для учебных заведений</h4>
-				<p class="services-text">DET оказывает широкий спектр услуг для ВУЗов и учебных заведений в решении задач перехода на дистанционное обучение. С нами вы сможете:</p>
-				<ul class="services-list services-list_marg">
-					<li class="services-text services-item">Перенести в цифровую среду все этапы образовательного процесса и эффективно применять на практике <span class="services-text_blue">адаптивный образовательный контент.</span></li>
-					<li class="services-text services-item">Оцифровать ваши текущие курсы, как самостоятельно так и с нашей помощью</li>
-					<li class="services-text services-item">Заработать на продаже курсов не только студентам, но <span class="services-text_blue">другим учебным заведениям</span></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
-<footer class="footer">
+	</section>
+	<footer class="footer">
     <div class="container">
         <div class="footer-flex">
             <div class="footer-first">
@@ -207,8 +304,6 @@
                                 <path id="a" d="M0 25.853h120.8V0H0z"/>
                             </defs>
                             <g fill="none" fill-rule="evenodd">
-                                <path fill="#FFF" d="M-72-3165h1366V166H-72z"/>
-                                <path fill="#FFF" d="M-72-69h1366v235H-72z"/>
                                 <g opacity=".7" class="hover-svg">
                                     <path fill="#57606F" d="M69.226 2.991c0-1.403-.668-2.105-2.003-2.105h-.844v4.256h.692c1.436 0 2.155-.717 2.155-2.15m1.027-.032c0 .968-.273 1.708-.82 2.22-.546.512-1.334.768-2.362.768h-1.668V.084h1.844c.949 0 1.687.25 2.214.754.528.503.792 1.21.792 2.122"/>
                                     <mask id="b" fill="#fff">
@@ -222,8 +317,6 @@
                     <a href="" class="footer-link footer-link_first">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                             <g fill="none" fill-rule="evenodd">
-                                <path fill="#FFF" d="M-212-3158h1366V173H-212z"/>
-                                <path fill="#FFF" d="M-212-62h1366v235H-212z"/>
                                 <g transform="translate(1 1)">
                                     <path class="hover-svg" fill="#57606F" fill-rule="nonzero" d="M11.019 26.128h3.505V14.611H11.02v11.517zm13.656-11.916c-1.701 0-3.223.612-4.303 1.964v-1.603h-3.518v11.555h3.518V19.88c0-1.32 1.227-2.608 2.765-2.608 1.537 0 1.916 1.288 1.916 2.576v6.28h3.505V19.59c0-4.54-2.18-5.378-3.883-5.378zm-11.92-.752c.969 0 1.755-.775 1.755-1.73S13.724 10 12.755 10c-.969 0-1.755.775-1.755 1.73s.786 1.73 1.755 1.73z" opacity=".7"/>
                                     <circle class="hover-circle" cx="19" cy="19" r="19" stroke="#57606F" opacity=".3"/>
@@ -234,8 +327,6 @@
                     <a href="" class="footer-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                             <g fill="none" fill-rule="evenodd">
-                                <path fill="#FFF" d="M-257-3158h1366V173H-257z"/>
-                                <path fill="#FFF" d="M-257-62h1366v235H-257z"/>
                                 <g transform="translate(1 1)">
                                     <path class="hover-svg" fill="#57606F" fill-rule="nonzero" d="M23.871 13.106h-2.768c-.328 0-.693.434-.693 1.015v2.018h3.46v2.876h-3.46v8.635h-3.269v-8.635H14.18v-2.876h2.962v-1.693c0-2.427 1.67-4.4 3.961-4.4h2.769v3.06z" opacity=".7"/>
                                     <circle class="hover-circle" cx="19" cy="19" r="19" stroke="#57606F" opacity=".3"/>
@@ -274,12 +365,15 @@
                     <li class="footer-item footer-item_last">
                         <ul class="footer-sublist">
                             <li class="footer-subitem">
+                                <img src="img/eng.png" alt="">
                                 <a href="" class="footer-subitem-link">English</a>
                             </li>
                             <li class="footer-subitem">
+                                <img src="img/chi.png" alt="">
                                 <a href="" class="footer-subitem-link">中国</a>
                             </li>
                             <li class="footer-subitem">
+                                <img src="img/arab.png" alt="">
                                 <a href="" class="footer-subitem-link">العربية</a>
                             </li>
                         </ul>
@@ -290,9 +384,9 @@
     </div>
 </footer>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/libs.min.js"></script>
-<script src="js/common.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/common.js"></script>
 
 </body>
 </html>
