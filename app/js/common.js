@@ -143,8 +143,6 @@ $(window).scroll(function(){
         if($('.tech-block_chain').length > 0) {
             blockTop = $('.tech-block_chain').offset().top;
             if(windowTop + $(window).height() > blockTop && windowTop > lastScrollTop) {
-                console.log(lastScrollTop);
-                console.log(windowTop);
                 $('.tech-lines').addClass('down');
                 if($('.tech-lines').hasClass('down')) {
                     $('.tech-lines').removeClass('down');
@@ -157,18 +155,4 @@ $(window).scroll(function(){
         }
     }
     transformLines();
-
-    // function paralaxBlock() {
-    //     block = $('.paralax');
-    //     windowTop = $(window).scrollTop();
-    //     for (i = 0; i < block.length; i++) {
-    //         blockTop = block.eq(i).offset().top;
-    //         console.log(blockTop);
-    //     }
-    //
-    //
-    //
-    // }
-    // paralaxBlock();
-
 });
