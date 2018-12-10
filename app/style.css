@@ -1,0 +1,150 @@
+/*!
+Theme Name: DET
+Theme URI: https://yourfuture.com.ua/
+Author: Underscores.me
+Author URI: https://yourfuture.com.ua/
+Description: DET Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: det
+*/
+
+div.standart-content-block > p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #57606f;
+    margin-bottom: 30px;
+}
+
+div.services-block > p{
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #57606f;
+}
+
+section.services-content.services-content_pad > .container > p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #57606f;
+    text-align: center;
+    margin: 20px auto 0;
+    max-width: 600px;
+}
+section.services-content.services-content_pad > .container > p > a{
+    color: #5869f8;
+    text-decoration: none;
+}
+
+section.services-content.services-content_pad ul.community-list p:not(.community-title){
+    font-size: 18px;
+    line-height: 1.5;
+    color: #57606f;
+}
+section.services-content.services-content_pad ul.community-list p:not(.community-title) > a{
+    color: #5869f8;
+    text-decoration: none;
+}
+
+
+section.services-content.services-content_pad div.connect p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #57606f;
+}
+section.services-content.services-content_pad div.connect p a{
+    color: #5869f8;
+    text-decoration: none;
+}
+
+div.about-block > p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #57606f;
+    margin-top: 20px;
+}
+div.about-block p > a{
+    color: #5869f8;
+    text-decoration: none;
+}
+div.about-block p > strong{
+    font-family: "ProximaNovaSemibold";
+    color: #323647;
+}
+
+.vacancy-main-top h4{
+    font-size: 30px;
+    line-height: 1.53;
+    color: #323647;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.vacancy-main-top p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #57606f;
+    margin-bottom: 50px;
+}
+.vacancy-main-top h5{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #323647;
+}
+.vacancy-main-top ul{
+    margin: 10px 0 50px;
+}
+.vacancy-main-top ul li{
+
+    font-size: 18px;
+    line-height: 1.5;
+    color: #57606f;
+    margin-bottom: 9px;
+    padding-left: 35px;
+    position: relative;
+}
+.vacancy-main-top ul li:before {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    content: '';
+    display: block;
+    background: #5869f8;
+    left: 3px;
+    top: 13px;
+}
+
+.hidden{
+    display: none;
+}
+
+div.vacancy-main .wpcf7-validation-errors{
+    display: none!important;
+}
+div.vacancy-main [name="user_agree[]"]{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+    left: -2px;
+    top: 1px;
+    z-index: 2;
+}
+
+
+#feedback_popup .wpcf7-validation-errors{
+    display: none!important;
+}
+
+.career-tab.active {
+    background: rgba(88, 105, 248, 0.15);
+}
+
+@media only screen and (max-width: 480px){
+    div.standart-content-block > p, div.services-block > p {
+        font-size: 18px;
+        line-height: 1.39;
+    }
+}

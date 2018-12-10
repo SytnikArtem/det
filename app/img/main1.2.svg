@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="39px" height="38px" viewBox="0 0 39 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>Bitmap Copy 2</title>
@@ -5,6 +6,7 @@
     <defs>
         <ellipse id="path-1" cx="16.5326553" cy="16.4543687" rx="16.5326553" ry="16.4543687"></ellipse>
         <polygon id="path-3" points="0.119964143 0.211957223 16.4934476 0.211957223 16.4934476 15.8941853 0.119964143 15.8941853"></polygon>
+        <ellipse id="path-5" cx="16.5326553" cy="16.4543687" rx="16.5326553" ry="16.4543687"></ellipse>
     </defs>
     <g id="Current" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="DET-Desktop-Index" transform="translate(-523.000000, -1038.000000)">
@@ -12,7 +14,7 @@
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
-                <ellipse stroke="#FFFFFF" stroke-width="2.06175857" cx="16.5326553" cy="16.4543687" rx="17.5635346" ry="17.485248"></ellipse>
+                <use id="Mask" fill="#DFF4FD" xlink:href="#path-1"></use>
                 <g id="Group-32" mask="url(#mask-2)">
                     <g transform="translate(5.668339, 7.521997)">
                         <path d="M21.0970981,15.6501781 L17.5122113,26.3804638 L4.87912941,25.7629669 L4.17097384,17.4598559 C3.92975297,14.6457164 5.76957904,12.1902192 8.38372413,11.3563514 C9.12806283,11.1172565 9.93787577,11.0092357 10.777669,11.0662101 L18.1852175,11.5526331 C18.5246497,11.5753569 18.8461627,11.6464926 19.1438982,11.7548427 C20.7187259,12.3324905 21.6419126,14.0170222 21.0970981,15.6501781" id="Fill-7" fill="#FFFFFF"></path>
@@ -33,6 +35,10 @@
                         <path d="M12.7020768,4.81265218 C12.7020768,5.5019546 13.2847928,6.06037682 14.0033566,6.06037682 C14.7222455,6.06037682 15.3049614,5.5019546 15.3049614,4.81265218 C15.3049614,4.12366138 14.7222455,3.56492754 14.0033566,3.56492754 C13.2847928,3.56492754 12.7020768,4.12366138 12.7020768,4.81265218" id="Fill-26" fill="#EABCF7"></path>
                     </g>
                 </g>
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <ellipse stroke="#FFFFFF" stroke-width="2.06175857" cx="16.5326553" cy="16.4543687" rx="17.5635346" ry="17.485248"></ellipse>
             </g>
         </g>
     </g>

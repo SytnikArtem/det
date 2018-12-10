@@ -76,11 +76,11 @@ gulp.task('tiny', function(){
 
 gulp.task('img', ['tiny'], function(){
   return gulp.src('app/img/**/*.+(svg|ico)')
-    .pipe(cache(imagemin({
-      interlaced: true,
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    })))
+    // .pipe(cache(imagemin({
+    //   interlaced: true,
+    //   progressive: true,
+    //   svgoPlugins: [{removeViewBox: false}]
+    // })))
     .pipe(gulp.dest('dist/img'));
 });
 
@@ -93,15 +93,15 @@ gulp.task('watch', ['browser-sync', 'libs-css', 'jquery', 'libs-js'], function()
 gulp.task('clean', function() {
     return del.sync('dist');
 });
-gulp.task('build', ['clean', 'sass', 'jquery', 'img', 'import'], function(){
+gulp.task('build', ['clean', 'sass', 'jquery', 'img'], function(){
   var buildCss = gulp.src([
     'app/css/main.css',
     'app/css/libs.min.css'
   ])
   .pipe(gulp.dest('dist/css'))
 
-  // var buildFonts = gulp.src('app/fonts/**/*')
-  // .pipe(gulp.dest('dist/fonts'))
+  var buildFonts = gulp.src('app/fonts/**/*')
+  .pipe(gulp.dest('dist/fonts'))
 
   var buildJs = gulp.src('app/js/**/*')
   .pipe(gulp.dest('dist/js'))

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>Bitmap Copy</title>
@@ -5,6 +6,7 @@
     <defs>
         <circle id="path-1" cx="16.5" cy="16.5" r="16.5"></circle>
         <polygon id="path-3" points="0.0987969996 0.0845020921 11.3183749 0.0845020921 11.3183749 10.3182285 0.0987969996 10.3182285"></polygon>
+        <circle id="path-5" cx="16.5" cy="16.5" r="16.5"></circle>
     </defs>
     <g id="Current" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="DET-Desktop-Index" transform="translate(-252.000000, -1038.000000)">
@@ -12,7 +14,7 @@
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
-                <circle stroke="#FFFFFF" stroke-width="2.06175857" cx="16.5" cy="16.5" r="17.5308793"></circle>
+                <use id="Mask" fill="#ECF3FA" xlink:href="#path-1"></use>
                 <g id="Group-22" mask="url(#mask-2)">
                     <g transform="translate(-4.714286, 7.542857)">
                         <polygon id="Fill-1" fill="#AECBFF" points="17.1869388 9.3825784 17.1869388 16.4195122 22.6555102 16.4195122 22.6555102 10.8853772"></polygon>
@@ -31,6 +33,10 @@
                         </g>
                     </g>
                 </g>
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <circle stroke="#FFFFFF" stroke-width="2.06175857" cx="16.5" cy="16.5" r="17.5308793"></circle>
             </g>
         </g>
     </g>
