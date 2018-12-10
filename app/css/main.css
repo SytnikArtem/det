@@ -3306,7 +3306,7 @@ svg {
   opacity: 1;
   pointer-events: auto;
 }
-.header-sublist:hover .header-item_open .header-item-link {
+.header-sublist:hover ~ .header-item-link {
   color: #5869f8;
 }
 .header-sublist:hover open-arrow{
